@@ -685,3 +685,45 @@ ul.sponsors {
         font-size: 16px;
     }
 }
+
+
+/* ===== 移动设备导航栏修复 ===== */
+@media (max-width: 768px) {
+  .navbar .nav {
+    display: block !important; /* 改为块级显示 */
+    width: 100%;
+  }
+  
+  .navbar .nav li {
+    display: block !important; /* 改为块级显示 */
+    width: 100%;
+    float: none;
+  }
+  
+  .navbar .nav li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    border-radius: 0 !important;
+  }
+  
+  .navbar .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* 修复导航栏内边距 */
+  .navbar-inner {
+    padding: 10px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .nav li a {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
