@@ -24,13 +24,22 @@
             <div class="navbar">
                <div class="navbar-inner">
                   <div class="container">
-                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="Team.html">Team</a></li>
-                        <li><a href="Research.html">Research</a></li>
-                        <li><a href="Workflow.html">Workflow</a></li>
-                        <li><a href="Blog.html">Blog</a></li>
-                     </ul>
+                     <!-- 汉堡菜单按钮（仅在小屏幕上显示） -->
+                     <button class="btn btn-navbar visible-phone visible-tablet" data-toggle="collapse" data-target=".nav-collapse">                        
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                     <!-- 可折叠的导航菜单 -->
+                     <div class="nav-collapse collapse">
+                        <ul class="nav">
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="Team.html">Team</a></li>
+                           <li><a href="Research.html">Research</a></li>
+                           <li><a href="Workflow.html">Workflow</a></li>
+                           <li><a href="Blog.html">Blog</a></li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
@@ -192,5 +201,18 @@
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script> $('#main-carousel').carousel(); </script>
+      <script>
+        // 初始化轮播图
+        $('#main-carousel').carousel();
+        // 确保导航栏响应式功能正常工作
+        $(document).ready(function() {
+          // 当窗口大小改变时，重新计算导航栏
+         $(window).resize(function() {
+            if ($(window).width() >= 980) {
+              $('.nav-collapse').removeClass('in');
+            }
+         });
+        });
+      </script>
    </body>
 </html>
