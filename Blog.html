@@ -17,22 +17,32 @@
             <p class="lead"> EDUHK MIT </p>
             <h1>Sun Team</h1>
          </header>
+         <!--5个导航栏控件开始-->
          <div class="masthead">
             <div class="navbar">
                <div class="navbar-inner">
                   <div class="container">
-                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="Team.html">Team</a></li>
-                        <li><a href="Research.html">Research</a></li>
-                        <li><a href="Project.html">Project</a></li>
-                        <li><a href="Workflow.html">Workflow</a></li>
-                        <li><a href="Blog.html">Blog</a></li>
-                     </ul>
+                     <!-- 汉堡菜单按钮（仅在小屏幕上显示） -->
+                     <button class="btn btn-navbar visible-phone visible-tablet" data-toggle="collapse" data-target=".nav-collapse">                        
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                     <!-- 可折叠的导航菜单 -->
+                     <div class="nav-collapse collapse">
+                        <ul class="nav">
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="Team.html">Team</a></li>
+                           <li><a href="Research.html">Research</a></li>
+                           <li><a href="Workflow.html">Workflow</a></li>
+                           <li><a href="Blog.html">Blog</a></li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+         <!--5个导航栏控件结束-->
          <hr>
          <div id="media">
             <div class="row-fluid post_row">
@@ -80,19 +90,23 @@
 
          </div>
       </div>
+      <!--页脚开始-->
       <footer id="footer" style="border-top: none;">
          <div class="container-fluid">
             <div class="row-fluid" style="border-top: none; display: flex; align-items: center;">
                <div class="span6" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
                   <div class="logo-container" style="display: flex; align-items: center; margin-bottom: 15px; justify-content: center;">
+                  <!--左边两个logo-->
                      <img src="images\logo-eduhk.webp" alt="The Education University of Hong Kong Logo" style="height: 60px; margin-right: 20px;">
                      <img src="images\logo_mit.svg" alt="Department of Mathematics and Information Technology Logo" style="height: 60px;">
                   </div>
                   <p style="font-weight: bold; margin: 0; text-align: center;">
+                  <!--logo下方的文字-->
                      Department of Mathematics and Information Technology<br>
                      The Education University of Hong Kong
                   </p>
                </div>
+               <!--页脚右边Contact Information部分-->
                <div class="span6" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
                   <div style="width: 100%; max-width: 400px;"></div>
                      <h3 style="border-bottom: none; margin-bottom: 5px;">Contact Information</h3>
@@ -102,7 +116,7 @@
                            <b>Location: </b>The Education University of Hong Kong<br>
                            10 Lo Ping Road, Tai Po, New Territories
                         </p>
-                        <a href="http://maps.google.com/" style="color: white;">Show Map</a>
+                        <p><a href="http://maps.google.com/" style="color: white;">Show Map</a></p>
                      </div>
                   </div>
                </div>
@@ -121,6 +135,17 @@
                  target: "#navparent"
              });
          });
+      </script>
+      <script>
+        // 确保导航栏响应式功能正常工作
+        $(document).ready(function() {
+          // 当窗口大小改变时，重新计算导航栏
+         $(window).resize(function() {
+            if ($(window).width() >= 980) {
+              $('.nav-collapse').removeClass('in');
+            }
+         });
+        });
       </script>
    </body>
 </html>
