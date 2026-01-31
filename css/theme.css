@@ -685,3 +685,150 @@ ul.sponsors {
         font-size: 16px;
     }
 }
+
+
+/* ===== 汉堡菜单按钮样式 ===== */
+.btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 8px;
+  background-color: #2E8B57;
+  background-image: none;
+  border: 1px solid #1C5D3A;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-navbar:hover,
+.btn-navbar:active,
+.btn-navbar.active,
+.btn-navbar.disabled,
+.btn-navbar[disabled] {
+  background-color: #1C5D3A;
+}
+
+.btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+/* 控制在不同设备上的显示 */
+.visible-phone {
+  display: none !important;
+}
+
+.visible-tablet {
+  display: none !important;
+}
+
+.hidden-phone {
+  display: block !important;
+}
+
+/* 手机设备（最大宽度 767px） */
+@media (max-width: 767px) {
+  .visible-phone {
+    display: block !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+  
+  .btn-navbar {
+    display: block;
+  }
+  
+  /* 确保导航栏在小屏幕上垂直排列 */
+  .nav-collapse .nav {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-collapse .nav > li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  
+  .nav-collapse .nav > li > a {
+    display: block;
+    padding: 10px 15px;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    border-radius: 0;
+  }
+  
+  .nav-collapse .nav > li:first-child > a {
+    border-radius: 0;
+  }
+  
+  .nav-collapse .nav > li:last-child > a {
+    border-radius: 0;
+  }
+}
+
+/* 平板设备（宽度在 768px 到 979px 之间） */
+@media (min-width: 768px) and (max-width: 979px) {
+  .visible-tablet {
+    display: block !important;
+  }
+  
+  .btn-navbar {
+    display: block;
+  }
+  
+  /* 在平板上也使用垂直排列 */
+  .nav-collapse .nav {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-collapse .nav > li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  
+  .nav-collapse .nav > li > a {
+    display: block;
+    padding: 10px 15px;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    border-radius: 0;
+  }
+}
+
+/* 电脑设备（最小宽度 980px） */
+@media (min-width: 980px) {
+  /* 确保汉堡按钮在电脑上隐藏 */
+  .btn-navbar {
+    display: none;
+  }
+  
+  /* 确保导航菜单在电脑上展开 */
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
