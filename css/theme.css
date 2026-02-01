@@ -536,9 +536,6 @@ ul.sponsors {
 	text-transform: uppercase;
 	font-family: BebasNeueRegular;
 	color: #ffffff;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #ffffff;
 	line-height: 35px;
 	margin-bottom: 20px;
 	margin-top: 25px;
@@ -894,7 +891,6 @@ ul.sponsors {
   font-size: 1.3em;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .contact-details {
