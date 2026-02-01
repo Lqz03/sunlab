@@ -80,40 +80,46 @@ body>.navbar .brand:hover {
 /* Sidenav for Docs
          -------------------------------------------------- */
 
+/* Sidenav for Docs
+         -------------------------------------------------- */
+
 @media screen and (max-width: 768px) {
-	.bs-docs-sidenav {
-		display: none !important;
-	}
+    .bs-docs-sidenav {
+        display: none !important;
+    }
 }
 
 .bs-docs-sidenav {
-	width: 180px;
-	margin: 30px 0 0;
-	padding: 0;
-	background-color: #fff;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-	box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+    width: 160px; /* 从 180px 减少到 160px */
+    margin: 25px 0 0; /* 减少顶部边距 */
+    padding: 0;
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+    font-size: 13px; /* 添加字体大小控制 */
 }
 
 .bs-docs-sidenav>li>a {
-	display: block;
-	width: 160px;
-	margin: 0 0 -1px;
-	padding: 8px 14px;
-	border: 1px solid #e5e5e5;
+    display: block;
+    width: 140px; /* 从 160px 减少到 140px */
+    margin: 0 0 -1px;
+    padding: 6px 12px; /* 减少内边距 */
+    border: 1px solid #e5e5e5;
+    font-size: 13px; /* 设置字体大小 */
+    line-height: 1.3; /* 调整行高 */
 }
 
 .bs-docs-sidenav>li>a.subhead {
-	display: block;
-	width: 135px;
-	margin: 0 0 -1px;
-	padding: 8px 30px;
-	border: 1px solid #e5e5e5;
-	font-size: 12px;
+    display: block;
+    width: 115px; /* 从 135px 减少到 115px */
+    margin: 0 0 -1px;
+    padding: 6px 30px;
+    border: 1px solid #e5e5e5;
+    font-size: 12px; /* 副标题字体更小 */
 }
 
 .bs-docs-sidenav>li:first-child>a {
