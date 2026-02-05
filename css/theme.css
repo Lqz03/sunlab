@@ -833,3 +833,114 @@ ul.sponsors {
     overflow: visible !important;
   }
 }
+
+/* 对齐首页3个News项目的高度 */
+.row-fluid .span4.feature-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 700px; /* 设置最小高度，根据内容可调整 */
+    margin-bottom: 20px;
+}
+
+/* 确保特征项目内部元素垂直分布 */
+.feature-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* 统一标题高度 */
+.feature-heading {
+    min-height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-heading h4 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    min-height: 50px;
+}
+
+/* 统一日期样式 */
+.feature-item h5 {
+    min-height: 30px;
+    margin-bottom: 10px;
+}
+
+.feature-item h5 .date {
+    font-weight: bold;
+    color: #2E8B57;
+}
+
+/* 统一图片容器 */
+.feature-item .centered {
+    height: 200px; /* 固定图片容器高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.feature-item .centered img {
+    max-height: 180px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 统一简介文本区域 */
+.feature-item p {
+    flex-grow: 1; /* 让简介区域填充剩余空间 */
+    min-height: 120px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* 统一底部间距 */
+.feature-item hr {
+    margin: 10px 0;
+    border-color: #e5e5e5;
+}
+
+/* 响应式调整 */
+@media (max-width: 979px) {
+    .row-fluid .span4.feature-item {
+        min-height: 650px;
+    }
+}
+
+@media (max-width: 767px) {
+    .row-fluid .span4.feature-item {
+        min-height: auto;
+        margin-bottom: 30px;
+    }
+    
+    .feature-item {
+        display: block;
+        height: auto;
+    }
+}
+
+/* 确保新闻行等高 */
+.row-fluid.news-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-fluid.news-row .span4 {
+    display: flex;
+}
+
+/* 悬停效果保持不变 */
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
