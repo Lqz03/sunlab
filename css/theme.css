@@ -834,52 +834,77 @@ ul.sponsors {
   }
 }
 
-/* 对齐首页3个News项目的高度 */
-.row-fluid .span4.feature-item {
+/* ===== 新闻卡片等高样式 ===== */
+
+/* 确保包含3个新闻的容器使用Flexbox布局 */
+.row-fluid.news-row,
+.row-fluid .row-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* 确保所有卡片高度相等 */
+}
+
+/* 每个新闻卡片的基本样式 */
+.news-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    min-height: 700px; /* 设置最小高度，根据内容可调整 */
-    margin-bottom: 20px;
+    height: 100%; /* 确保卡片填充容器高度 */
+    min-height: 620px; /* 设置最小高度，可根据需要调整 */
 }
 
-/* 确保特征项目内部元素垂直分布 */
-.feature-item {
-    border: 1px solid #e5e5e5;
-    border-radius: 4px;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+/* 新闻日期样式 - 固定高度 */
+.news-date {
+    min-height: 24px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-/* 统一标题高度 */
-.feature-heading {
-    min-height: 60px;
-    margin-bottom: 15px;
-}
-
-.feature-heading h4 {
+.news-date .date {
+    font-size: 13px;
+    color: #9F9F9F;
+    font-style: italic;
     margin: 0;
+}
+
+/* 新闻标题样式 - 固定最大高度，超出显示省略号 */
+.news-title {
+    min-height: 60px;
+    max-height: 80px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.news-title a {
+    color: #333;
+    text-decoration: none;
     font-size: 18px;
     line-height: 1.4;
-    min-height: 50px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 限制最多显示3行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-/* 统一日期样式 */
-.feature-item h5 {
-    min-height: 30px;
-    margin-bottom: 10px;
+.news-title a:hover {
+    color: #1189D9;
 }
 
-.feature-item h5 .date {
-    font-weight: bold;
-    color: #2E8B57;
+/* 新闻水平分隔线 */
+.news-hr {
+    margin: 10px 0;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #eee;
 }
 
-/* 统一图片容器 */
-.feature-item .centered {
-    height: 200px; /* 固定图片容器高度 */
+/* 新闻图片容器 - 固定高度 */
+.news-image-container {
+    min-height: 150px;
+    max-height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -887,60 +912,93 @@ ul.sponsors {
     overflow: hidden;
 }
 
-.feature-item .centered img {
-    max-height: 180px;
-    max-width: 100%;
+/* 新闻图片 - 保持宽高比并适应容器 */
+.news-image {
+    max-width: 90%;
+    max-height: 160px;
     width: auto;
     height: auto;
-    object-fit: contain;
+    object-fit: contain; /* 保持图片比例 */
 }
 
-/* 统一简介文本区域 */
-.feature-item p {
-    flex-grow: 1; /* 让简介区域填充剩余空间 */
+/* 新闻内容区域 - 弹性填充剩余空间 */
+.news-content {
+    flex: 1; /* 填充剩余空间 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 新闻描述文本 - 固定高度，超出可滚动 */
+.news-description {
+    flex: 1;
     min-height: 120px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    max-height: 150px;
     overflow: hidden;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* 限制最多显示6行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* 统一底部间距 */
-.feature-item hr {
-    margin: 10px 0;
-    border-color: #e5e5e5;
+/* 确保所有新闻卡片内的链接样式一致 */
+.news-description a {
+    color: #1189D9;
+    text-decoration: none;
+}
+
+.news-description a:hover {
+    text-decoration: underline;
 }
 
 /* 响应式调整 */
 @media (max-width: 979px) {
-    .row-fluid .span4.feature-item {
-        min-height: 650px;
+    .news-card {
+        min-height: 600px;
+    }
+    
+    .news-title {
+        min-height: 50px;
+        max-height: 70px;
+    }
+    
+    .news-description {
+        min-height: 110px;
+        max-height: 140px;
+        -webkit-line-clamp: 5; /* 小屏幕上显示5行 */
     }
 }
 
 @media (max-width: 767px) {
-    .row-fluid .span4.feature-item {
+    .row-fluid.news-row,
+    .row-fluid .row-fluid {
+        flex-direction: column;
+    }
+    
+    .news-card {
         min-height: auto;
         margin-bottom: 30px;
     }
     
-    .feature-item {
-        display: block;
-        height: auto;
+    .news-title {
+        min-height: auto;
+        max-height: none;
     }
-}
-
-/* 确保新闻行等高 */
-.row-fluid.news-row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.row-fluid.news-row .span4 {
-    display: flex;
-}
-
-/* 悬停效果保持不变 */
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+    .news-title a {
+        -webkit-line-clamp: 2; /* 手机屏幕显示2行 */
+    }
+    
+    .news-description {
+        min-height: auto;
+        max-height: none;
+        -webkit-line-clamp: 4; /* 手机屏幕显示4行 */
+    }
+    
+    .news-image-container {
+        min-height: 120px;
+        max-height: 150px;
+    }
 }
