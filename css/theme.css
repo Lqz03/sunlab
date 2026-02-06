@@ -835,177 +835,63 @@ ul.sponsors {
 }
 
 
-/* ===== 真正的等高新闻卡片布局 ===== */
-
-/* 新闻行容器 - 使用Flexbox确保等高 */
-.row-fluid.news-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch; /* 关键：使所有项目拉伸到相同高度 */
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-/* 每个新闻卡片 - 真正的等高 */
-.span4.feature-item.news-card {
+/* 确保新闻卡片等高样式与现有feature-item兼容 */
+.news-row .feature-item.news-card {
     display: flex;
     flex-direction: column;
-    flex: 1; /* 关键：所有卡片等宽等比例 */
-    min-width: 0; /* 防止内容溢出 */
-    margin: 0 15px 30px;
-    padding: 20px;
+    height: 100%;
+    min-height: 650px; /* 可根据实际需要调整 */
     background: #fff;
     border-radius: 4px;
     box-shadow: 1px 1px 2px 0px #E0E0E0;
+    padding: 20px;
     transition: box-shadow 0.3s ease;
 }
 
-/* 悬停效果 */
-.span4.feature-item.news-card:hover {
+/* 确保原有悬停效果依然生效 */
+.news-row .feature-item.news-card:hover {
     box-shadow: 0px 1px 5px 1px rgb(216, 216, 216);
 }
 
-/* 新闻头部（日期+标题）- 固定顶部 */
-.news-header {
-    flex-shrink: 0; /* 防止头部被压缩 */
-}
-
-/* 日期样式 */
-.news-header h5 {
-    margin: 0 0 10px 0;
-}
-
-.news-header .date {
-    font-size: 13px;
-    color: #9F9F9F;
-    font-style: italic;
-    display: block;
-}
-
-/* 标题样式 - 自适应高度 */
-.news-header .feature-heading {
-    margin: 0 0 15px 0;
-    line-height: 1.4;
-}
-
-.news-header .feature-heading a {
+/* 确保新闻标题链接颜色 */
+.news-row .feature-item.news-card .news-title a {
     color: #333;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
 }
 
-.news-header .feature-heading a:hover {
+.news-row .feature-item.news-card:hover .news-title a {
     color: #1189D9;
 }
 
-/* 分隔线 */
-.news-hr {
-    margin: 15px 0;
-    width: 100%;
-    border: 0;
-    border-top: 1px solid #eee;
-    flex-shrink: 0; /* 防止分隔线被压缩 */
-}
-
-/* 图片容器 - 固定高度 */
-.news-image-container {
-    flex-shrink: 0; /* 防止图片容器被压缩 */
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* 确保图片居中显示 */
+.news-row .feature-item.news-card .news-image-container {
+    text-align: center;
     margin: 10px 0;
-    overflow: hidden;
 }
 
-/* 图片样式 */
-.news-image {
-    max-width: 90%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-
-/* 新闻内容区域 - 弹性填充剩余空间 */
-.news-content {
-    flex: 1; /* 关键：填充所有剩余空间，实现等高 */
+/* 确保新闻描述部分填充剩余空间 */
+.news-row .feature-item.news-card .news-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 0; /* 允许内容滚动 */
 }
 
-/* 新闻描述 - 完整显示，可以滚动 */
-.news-description {
+/* 确保新闻描述文本有最小高度 */
+.news-row .feature-item.news-card .news-description {
     flex: 1;
-    margin: 0;
-    line-height: 1.6;
-    font-size: 14px;
-    overflow-y: auto; /* 如果内容太长，可以滚动 */
-    max-height: 200px; /* 设置最大高度，防止过长 */
-}
-
-/* 描述中的链接 */
-.news-description a {
-    color: #1189D9;
-    text-decoration: none;
-}
-
-.news-description a:hover {
-    text-decoration: underline;
+    min-height: 150px; /* 确保即使内容较少也有足够高度 */
 }
 
 /* 响应式调整 */
 @media (max-width: 979px) {
-    .row-fluid.news-row {
-        flex-wrap: wrap;
-    }
-    
-    .span4.feature-item.news-card {
-        flex: 0 0 calc(50% - 30px); /* 平板设备显示2列 */
-        margin: 0 15px 30px;
-    }
-    
-    .news-image-container {
-        height: 150px;
-    }
-    
-    .news-description {
-        max-height: 180px;
+    .news-row .feature-item.news-card {
+        min-height: 600px;
     }
 }
 
 @media (max-width: 767px) {
-    .row-fluid.news-row {
-        flex-direction: column;
-        margin-left: 0;
-        margin-right: 0;
+    .news-row .feature-item.news-card {
+        min-height: auto;
+        margin-bottom: 30px;
     }
-    
-    .span4.feature-item.news-card {
-        flex: 1 0 100%; /* 手机设备显示1列 */
-        margin: 0 0 30px 0;
-        width: 100%;
-    }
-    
-    .news-image-container {
-        height: 140px;
-    }
-    
-    .news-description {
-        max-height: none; /* 手机上不需要最大高度限制 */
-        overflow-y: visible;
-    }
-}
-
-/* 确保Bootstrap的span4在Flexbox中正常工作 */
-.row-fluid .span4 {
-    width: auto; /* 覆盖Bootstrap的固定宽度 */
-    margin-left: 0;
-}
-
-/* 修复新闻卡片在Bootstrap网格系统中的对齐 */
-.row-fluid [class*="span"] {
-    margin-left: 0;
 }
