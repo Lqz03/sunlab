@@ -187,5 +187,21 @@
             </div>
          </div>
       </footer>
+
+      <!-- Javascript files -->
+      <script src="js/jquery-1.9.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script> $('#main-carousel').carousel(); </script>
+      <script>
+        // 确保导航栏响应式功能正常工作
+        $(document).ready(function() {
+          // 当窗口大小改变时，重新计算导航栏
+         $(window).resize(function() {
+            if ($(window).width() >= 980) {
+              $('.nav-collapse').removeClass('in');
+            }
+         });
+        });
+      </script>
    </body>
 </html>
