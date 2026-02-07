@@ -185,6 +185,7 @@ body>.navbar .brand:hover {
 	margin-bottom: 0
 }
 
+
 #media .post_row .last {
 	margin-right: 0
 }
@@ -288,6 +289,14 @@ body>.navbar .brand:hover {
 	color: #1189D9;
 	font-size: 30px;
 	font-weight: bold;
+}
+
+#media .post_row .post:hover a.plus_wrapper {
+	display: block
+}
+
+#media .post_row .post:hover {
+	box-shadow: 0px 1px 5px 1px rgb(216, 216, 216)
 }
 
 #media .post_row .post:hover .text h5 a {
@@ -812,100 +821,18 @@ ul.sponsors {
   }
 }
 
-/* === Latest News 卡片等高效样式 === */
 
-/* 1. 父容器设置为flex，确保卡片等高 */
-.row-fluid.news-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* 2. 每个卡片的基础样式 */
-.feature-item.news-card {
+/* 确保新闻卡片等高样式与现有feature-item兼容 */
+.news-row .feature-item.news-card {
     display: flex;
     flex-direction: column;
-    width: 100%; /* 基础宽度100% */
-    margin-bottom: 30px;
+    height: 100%;
+    min-height: 650px; /* 可根据实际需要调整 */
     background: #fff;
     border-radius: 4px;
     box-shadow: 1px 1px 2px 0px #E0E0E0;
     padding: 20px;
     transition: box-shadow 0.3s ease;
-    box-sizing: border-box;
-}
-
-/* 3. Bootstrap 2的.span4宽度（33.3%） */
-.span4.feature-item.news-card {
-    width: 31.333%; /* 留出间距 */
-    margin-right: 2%;
-}
-
-/* 清除每行第三个的右边距 */
-.span4.feature-item.news-card:nth-child(3n) {
-    margin-right: 0;
-}
-
-/* 4. 确保所有卡片内容区域等高 */
-.feature-item.news-card .news-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.feature-item.news-card .news-description {
-    flex: 1;
-}
-
-/* 5. 统一图片尺寸 */
-.feature-item.news-card .news-image-container {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.feature-item.news-card .news-image-container img {
-    width: 100%;
-    height: 180px; /* 固定高度 */
-    object-fit: cover;
-    border-radius: 3px;
-}
-
-/* 6. 统一标题高度 */
-.feature-item.news-card .news-title {
-    min-height: 60px;
-    margin: 10px 0;
-}
-
-.feature-item.news-card .news-title h5 {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.4;
-}
-
-/* 7. 统一日期样式 */
-.feature-item.news-card .news-date {
-    margin-bottom: 10px;
-}
-
-.feature-item.news-card .news-date .date {
-    font-size: 12px;
-    color: #666;
-    font-style: italic;
-}
-
-/* 8. 统一分割线 */
-.feature-item.news-card .news-hr {
-    margin: 10px 0;
-    border-color: #eee;
-}
-
-/* 9. 悬停效果 */
-.feature-item.news-card:hover {
-    box-shadow: 0px 1px 5px 1px rgb(216, 216, 216);
-}
-
-.feature-item.news-card:hover .news-title a {
-    color: #1189D9;
 }
 
 /* 确保原有悬停效果依然生效 */
