@@ -389,7 +389,8 @@ body>.navbar .brand:hover {
 .feature-item p {
 	margin-left: 15px;
 	margin-right: 15px;
-	line-height: 1;
+	line-height: 1.2;
+	margin-top: 5px;
 }
 
 .feature-heading {
@@ -397,8 +398,8 @@ body>.navbar .brand:hover {
 	margin-bottom: 20px;
 	margin-left: 15px;
 	margin-right: 15px;
-	height: 95px;
-	line-height: 1;
+	height: 80px;
+	line-height: 1.3;
 }
 
 .feature-heading a:hover {
