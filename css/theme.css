@@ -343,7 +343,7 @@ body>.navbar .brand:hover {
 	margin: 12.5px 0;
 	font-weight: 100;
 	margin-bottom: 25px;
-	line-height: 75px;
+	line-height: 100px;
 }
 
 .feature-item:hover {
@@ -361,9 +361,9 @@ body>.navbar .brand:hover {
 .feature-item .date {
     display: block;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 10px;
     color: #4c4e4d; 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: left;
 }
 
