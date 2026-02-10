@@ -835,47 +835,64 @@ ul.sponsors {
 }
 
 
-/* 新闻卡片等高样式 */
-.equal-height-container {
+/* 确保Latest News卡片等高 */
+.row-fluid.marketing .row-fluid {
   display: flex;
   flex-wrap: wrap;
 }
 
-.news-card {
+/* 卡片等高样式 */
+.feature-item {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 600px; /* 设置一个最小高度，根据实际情况调整 */
 }
 
-.news-card .feature-heading {
-  min-height: 80px; /* 设置最小高度，可以根据需要调整 */
+/* 确保卡片内容均匀分布 */
+.feature-item .feature-heading {
+  flex-shrink: 0;
+  min-height: 60px; /* 设置标题最小高度 */
+}
+
+.feature-item .centered {
+  flex-shrink: 0;
+  height: 200px; /* 固定图片容器高度 */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.news-card .centered {
-  flex-shrink: 0; /* 防止图片容器缩小 */
+.feature-item .centered img {
+  max-height: 180px;
+  width: auto;
+  object-fit: contain;
 }
 
-.news-card p {
-  flex-grow: 1; /* 让简介部分填充剩余空间 */
-  margin-bottom: 20px; /* 添加底部间距 */
+.feature-item p {
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-height: 100px; /* 确保简介部分有最小高度 */
 }
 
-/* 确保卡片内部元素有合适间距 */
-.news-card .feature-item {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.feature-item .date {
+  flex-shrink: 0;
 }
 
 /* 响应式调整 */
-@media (max-width: 768px) {
-  .news-card {
-    margin-bottom: 30px;
+@media (max-width: 979px) {
+  .feature-item {
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 767px) {
+  .row-fluid.marketing .row-fluid {
+    display: block;
   }
   
-  .news-card .feature-heading {
-    min-height: 60px;
+  .feature-item {
+    min-height: auto;
+    margin-bottom: 30px;
   }
 }
