@@ -185,6 +185,19 @@ body>.navbar .brand:hover {
 	margin-bottom: 0
 }
 
+#media .post_row .post {
+	background: #fff;
+	/*margin-left: 0;;
+    margin-right: 20px;*/
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px 0px #E0E0E0;
+	width: 80%;
+	max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    height: auto;
+    min-height: 616px;
+}
 
 #media .post_row .last {
 	margin-right: 0
@@ -819,66 +832,4 @@ ul.sponsors {
     height: auto !important;
     overflow: visible !important;
   }
-}
-
-
-/* 确保新闻卡片等高样式与现有feature-item兼容 */
-.news-row .feature-item.news-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 650px; /* 可根据实际需要调整 */
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 1px 1px 2px 0px #E0E0E0;
-    padding: 20px;
-    transition: box-shadow 0.3s ease;
-}
-
-/* 确保原有悬停效果依然生效 */
-.news-row .feature-item.news-card:hover {
-    box-shadow: 0px 1px 5px 1px rgb(216, 216, 216);
-}
-
-/* 确保新闻标题链接颜色 */
-.news-row .feature-item.news-card .news-title a {
-    color: #333;
-    text-decoration: none;
-}
-
-.news-row .feature-item.news-card:hover .news-title a {
-    color: #1189D9;
-}
-
-/* 确保图片居中显示 */
-.news-row .feature-item.news-card .news-image-container {
-    text-align: center;
-    margin: 10px 0;
-}
-
-/* 确保新闻描述部分填充剩余空间 */
-.news-row .feature-item.news-card .news-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* 确保新闻描述文本有最小高度 */
-.news-row .feature-item.news-card .news-description {
-    flex: 1;
-    min-height: 150px; /* 确保即使内容较少也有足够高度 */
-}
-
-/* 响应式调整 */
-@media (max-width: 979px) {
-    .news-row .feature-item.news-card {
-        min-height: 600px;
-    }
-}
-
-@media (max-width: 767px) {
-    .news-row .feature-item.news-card {
-        min-height: auto;
-        margin-bottom: 30px;
-    }
 }
