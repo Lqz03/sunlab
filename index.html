@@ -99,10 +99,10 @@
                   <h2 class="centered">Latest News</h2>
                <div class="span4 feature-item news-card">
                   <span class="date"> January, 2026 </span>
-                  <h4 class="feature-heading">
+                  <h5 class="feature-heading">
                      Dr. Sun Daner's Research Team Visits Shenzhen Hong Kong Pui Kiu College Longhua Xinyi School to Explore Research Collaboration
                      <br/>
-                  </h4>
+                  </h5>
                   <hr>
                   <div class="centered">
                      <img src="images\Home\Home_news\Jan2026.png" alt="">
@@ -114,10 +114,10 @@
                </div>
                <div class="span4 feature-item news-card">
                   <span class="date"> November, 2025 </span>
-                  <h4 class="feature-heading">
+                  <h5 class="feature-heading">
                      Make maths yours: ScaffoldiaMyMaths delivers personalised pathways
                      <br/>
-                  </h4>
+                  </h5>
                   <hr>
                   <div class="centered">
                      <img src="images\Home\Home_news\Nov202501.png" alt="">
@@ -129,10 +129,10 @@
                </div>
                <div class="span4 feature-item news-card">
                   <span class="date"> November, 2025 </span>
-                  <h4 class="feature-heading">
+                  <h5 class="feature-heading">
                      Dr. Sun Daner's Research Team Hosts Workshop with Professor Alexandra Cristea from Durham University
                      <br/>
-                  </h4>
+                  </h5>
                   <hr>
                   <div class="centered">
                      <img src="images\Home\Home_news\Nov202502.png" alt="">
@@ -195,88 +195,6 @@
             }
          });
         });
-      </script>
-      <script>
-      // 等待页面加载完成
-      $(document).ready(function() {         
-         // 设置新闻卡片等高
-         function setEqualCardHeights() {
-            // 只在宽度大于768px时执行（桌面端）
-            if ($(window).width() > 768) {              
-               // 重置之前设置的高度
-               $('.news-card').css('height', 'auto');
-               $('.news-card .feature-heading').css('min-height', 'auto');
-               $('.news-card .centered').css('height', 'auto');
-               $('.news-card .centered img').css('height', 'auto');
-      
-               // 初始化最大高度变量
-               var maxCardHeight = 0;
-               var maxHeadingHeight = 0;
-               var maxImageHeight = 0;
-               var maxContentHeight = 0;
-      
-               // 遍历每个卡片，找到最大高度
-               $('.news-card').each(function() {
-                  var cardHeight = $(this).outerHeight();
-                  var headingHeight = $(this).find('.feature-heading').outerHeight();
-                  var imageHeight = $(this).find('.centered').outerHeight();
-                  var contentHeight = $(this).find('p').outerHeight();
-        
-                  if (cardHeight > maxCardHeight) maxCardHeight = cardHeight;
-                  if (headingHeight > maxHeadingHeight) maxHeadingHeight = headingHeight;
-                  if (imageHeight > maxImageHeight) maxImageHeight = imageHeight;
-                  if (contentHeight > maxContentHeight) maxContentHeight = contentHeight;
-               });
-      
-               // 设置所有卡片为最大高度
-               $('.news-card').css('height', maxCardHeight + 'px');
-      
-               // 设置标题最小高度
-               $('.news-card .feature-heading').css('min-height', maxHeadingHeight + 'px');
-      
-               // 设置图片容器高度
-               $('.news-card .centered').css('height', maxImageHeight + 'px');
-      
-               // 设置图片高度
-               $('.news-card .centered img').css('height', '100%');
-      
-               // 设置简介段落高度
-               $('.news-card p').css('min-height', maxContentHeight + 'px');
-            } else {
-               // 在移动设备上重置为自动高度
-               $('.news-card').css('height', 'auto');
-               $('.news-card .feature-heading').css('min-height', 'auto');
-               $('.news-card .centered').css('height', 'auto');
-               $('.news-card .centered img').css('height', 'auto');
-               $('.news-card p').css('min-height', 'auto');
-            }
-         }
-  
-         // 页面加载时执行
-         setEqualCardHeights();
-  
-         // 窗口大小改变时重新计算
-         $(window).resize(function() {
-
-            // 使用防抖技术避免频繁执行
-            clearTimeout(window.resizeTimer);
-            window.resizeTimer = setTimeout(function() {
-               setEqualCardHeights();
-            }, 250);
-         });
-  
-         // 图片加载完成后重新计算高度（确保图片完全加载）
-         $('.news-card img').on('load', function() {           
-            setEqualCardHeights();
-         });
-  
-         // 如果图片已缓存，也触发加载事件
-         $('.news-card img').each(function() {           
-            if (this.complete) {
-               $(this).trigger('load');
-            }
-         });
-      });
       </script>
    </body>
 </html>
