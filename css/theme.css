@@ -87,8 +87,8 @@ body>.navbar .brand:hover {
 }
 
 .bs-docs-sidenav {
-    width: 140px;  /* 从180px改为150px */
-    margin: 20px 0 0;  /* 上边距从30px改为20px */
+    width: 140px;  
+    margin: 20px 0 0; 
     padding: 0;
     background-color: #fff;
     -webkit-border-radius: 6px;
@@ -101,20 +101,20 @@ body>.navbar .brand:hover {
 
 .bs-docs-sidenav > li > a {
     display: block;
-    width: 120px;  /* 从160px改为130px */
+    width: 120px; 
     margin: 0 0 -1px;
-    padding: 5px 10px;  /* 从8px 14px改为5px 10px */
+    padding: 5px 10px;  
     border: 1px solid #e5e5e5;
-    font-size: 10px;  /* 添加字体大小，默认为14px，设为12px更小 */
+    font-size: 10px;  
 }
 
 .bs-docs-sidenav > li > a.subhead {
     display: block;
-    width: 105px;  /* 从135px改为110px */
+    width: 105px;  
     margin: 0 0 -1px;
-    padding: 6px 20px;  /* 从8px 30px改为6px 20px */
+    padding: 6px 20px;  
     border: 1px solid #e5e5e5;
-    font-size: 9px;  /* 从12px改为10px，让子标题更小 */
+    font-size: 9px;  
 }
 
 .bs-docs-sidenav>li:first-child>a {
@@ -167,13 +167,13 @@ body>.navbar .brand:hover {
 }
 
 #media {
-	margin-top: 70px
+	margin-top: 30px
 }
 
 #media .header {
 	margin-left: 0;
-	margin-bottom: 56px;
-	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-top: 15px;
 }
 
 #media .post_row {
@@ -191,7 +191,7 @@ body>.navbar .brand:hover {
     margin-right: 20px;*/
 	border-radius: 4px;
 	box-shadow: 1px 1px 2px 0px #E0E0E0;
-	width: 80%;
+	width: 70%;
 	max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
@@ -366,7 +366,7 @@ body>.navbar .brand:hover {
 	margin-left: 15px;
 	margin-right: 15px;
 	max-width: 90%;
-	height: 175px;
+	height: 155px;
 }
 
 /* 为news卡片的date添加统一样式 */
