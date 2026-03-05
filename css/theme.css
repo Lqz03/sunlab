@@ -626,7 +626,7 @@ ul.sponsors {
 @media (max-width: 768px) {
     .workflow-img {
         max-width: 30%;           /* 平板设备稍大 */
-        height: 150px;            /* 适当降低高度 */
+        height: 90px;            /* 适当降低高度 */
         margin: 9px 15px 12px 15px;
     }
 }
@@ -634,7 +634,7 @@ ul.sponsors {
 @media (max-width: 480px) {
     .workflow-img {
         max-width: 45%;           /* 手机设备更大 */
-        height: 120px;            /* 进一步降低高度 */
+        height: 70px;            /* 进一步降低高度 */
         float: none;              /* 取消浮动 */
         display: block;
         margin: 15px auto;        /* 居中显示 */
