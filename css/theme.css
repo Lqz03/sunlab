@@ -619,7 +619,7 @@ ul.sponsors {
 .workflow-img {
     width: auto;                 /* 宽度由高度和原始比例决定 */
     max-width: 20%;              /* 仍限制最大宽度为父容器的20% */
-    height: 180px;               /* 统一高度（可根据实际预览微调） */
+    height: 110px;               /* 统一高度（可根据实际预览微调） */
     margin: 9px 15px 12px 15px;  /* 保留原有边距 */
 }
 
