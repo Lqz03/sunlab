@@ -626,13 +626,14 @@ ul.sponsors {
 
 .image-row img {
     display: block;
+	width: 100%;           /* 图片宽度填满列 */
     max-width: 100%;       /* 确保图片不超过父容器宽度 */
     height: auto;          /* 高度自适应，保持原始比例 */
     margin: 0 auto;        /* 水平居中 */
     float: none;           /* 覆盖可能的浮动 */
     /* 如果还有其他干扰样式，可以加上 !important，但不推荐滥用 */
     /* 移除旧 workflow-img 的固定高度和最大宽度限制 */
-    max-width: 100% !important;  /* 强制覆盖原有的 max-width:20% */
+    max-width: 100% ;  /* 强制覆盖原有的 max-width:20% */
     width: auto;
     height: auto;
 }
