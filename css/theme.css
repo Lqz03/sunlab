@@ -614,33 +614,35 @@ ul.sponsors {
     }
 }
 
-
-/* 控制 Workflow 页面图片大小 */
-.workflow-img {
-    width: auto;                 /* 宽度由高度和原始比例决定 */
-    max-width: 50%;              /* 仍限制最大宽度为父容器的20% */
-    height: 110px;               /* 统一高度（可根据实际预览微调） */
-    margin: 9px 15px 12px 15px;  /* 保留原有边距 */
+/* --- Workflow 页面图片并排样式 --- */
+.image-row {
+    margin-top: 25px;      /* 与上方说明文字保持间距 */
+    margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    .workflow-img {
-        max-width: 30%;           /* 平板设备稍大 */
-        height: 90px;            /* 适当降低高度 */
-        margin: 9px 15px 12px 15px;
+.image-row .span6 {
+    text-align: center;    /* 图片在列内居中（可选） */
+}
+
+.image-row img {
+    display: block;
+    max-width: 100%;       /* 确保图片不超过父容器宽度 */
+    height: auto;          /* 高度自适应，保持原始比例 */
+    margin: 0 auto;        /* 水平居中 */
+    float: none;           /* 覆盖可能的浮动 */
+    /* 如果还有其他干扰样式，可以加上 !important，但不推荐滥用 */
+    /* 移除旧 workflow-img 的固定高度和最大宽度限制 */
+    max-width: 100% !important;  /* 强制覆盖原有的 max-width:20% */
+    width: auto;
+    height: auto;
+}
+
+/* 针对小屏幕的微调（可选） */
+@media (max-width: 767px) {
+    .image-row {
+        margin-top: 15px;
     }
 }
-
-@media (max-width: 480px) {
-    .workflow-img {
-        max-width: 45%;           /* 手机设备更大 */
-        height: 70px;            /* 进一步降低高度 */
-        float: none;              /* 取消浮动 */
-        display: block;
-        margin: 15px auto;        /* 居中显示 */
-    }
-}
-
 
 /* 优化轮播图箭头样式 */
 .carousel-control {
