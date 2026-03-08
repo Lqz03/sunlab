@@ -186,14 +186,17 @@ body>.navbar .brand:hover {
 }
 
 #media .post_row .post {
-	background: #fff;
-	border-radius: 4px;
-	box-shadow: 1px 1px 2px 0px #E0E0E0;
-	width: 50%;
-	max-width: 1000px;
+    background: #fff;
+    border-radius: 6px;                /* 稍微增加圆角，更柔和 */
+    border: 1px solid #eaeaea;          /* 添加浅色边框，边缘立即清晰 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* 更深、更明显的阴影 */
+    width: 50%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     height: auto;
+    box-sizing: border-box;             /* 重要：让宽度包含 padding 和 border */
+    transition: all 0.3s ease;          /* 过渡效果，悬停时平滑变化 */
 }
 
 #media .post_row .last {
