@@ -1,875 +1,196 @@
-body {
-	padding-top: 15px;
-	padding-bottom: 0px;
-}
-
-
-/* Custom container */
-
-.container {
-	margin: 0 auto;
-	max-width: 1000px;
-}
-
-.container>hr {
-	margin: 20px 0
-}
-
-
-/* Customize the navbar links to be fill the entire space of the .navbar */
-
-.navbar .navbar-inner {
-	padding: 0
-}
-
-.navbar .nav {
-	margin: 0;
-	display: table;
-	width: 100%;
-}
-
-.navbar .nav li {
-	display: table-cell;
-	width: 1%;
-	float: none;
-}
-
-.navbar .nav li a {
-	font-weight: bold;
-	text-align: center;
-	border-left: 1px solid rgba(255, 255, 255, .75);
-	border-right: 1px solid rgba(0, 0, 0, .1);
-}
-
-.navbar .nav li:first-child a {
-	border-left: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-.navbar .nav li:last-child a {
-	border-right: 0;
-	border-radius: 0 3px 3px 0;
-}
-
-body>.navbar {
-	font-size: 13px
-}
-
-
-/* Change the docs' brand */
-
-body>.navbar .brand {
-	padding-right: 0;
-	padding-left: 0;
-	margin-left: 20px;
-	float: right;
-	font-weight: bold;
-	color: #000;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .125);
-	-webkit-transition: all .2s linear;
-	-moz-transition: all .2s linear;
-	transition: all .2s linear;
-}
-
-body>.navbar .brand:hover {
-	text-decoration: none;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
-}
-
-
-/* Sidenav for Docs
-         -------------------------------------------------- */
-
-@media screen and (max-width: 768px) {
-	.bs-docs-sidenav {
-		display: none !important;
-	}
-}
-
-.bs-docs-sidenav {
-    width: 140px;  
-    margin: 20px 0 0; 
-    padding: 0;
-    background-color: #fff;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-}
-
-.bs-docs-sidenav > li > a {
-    display: block;
-    width: 120px; 
-    margin: 0 0 -1px;
-    padding: 5px 10px;  
-    border: 1px solid #e5e5e5;
-    font-size: 10px;  
-}
-
-.bs-docs-sidenav > li > a.subhead {
-    display: block;
-    width: 105px;  
-    margin: 0 0 -1px;
-    padding: 6px 20px;  
-    border: 1px solid #e5e5e5;
-    font-size: 9px;  
-}
-
-.bs-docs-sidenav>li:first-child>a {
-	-webkit-border-radius: 6px 6px 0 0;
-	-moz-border-radius: 6px 6px 0 0;
-	border-radius: 6px 6px 0 0;
-}
-
-.bs-docs-sidenav>li:last-child>a {
-	-webkit-border-radius: 0 0 6px 6px;
-	-moz-border-radius: 0 0 6px 6px;
-	border-radius: 0 0 6px 6px;
-}
-
-.bs-docs-sidenav>.active>a {
-	position: relative;
-	z-index: 2;
-	padding: 5px 10px;
-	border: 1px solid #e5e5e5;;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, .15);
-	-webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
-	-moz-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
-	box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
-}
-
-.bs-docs-sidenav>li>a:hover {
-	background-color: #f5f5f5
-}
-
-.bs-docs-sidenav a:hover .icon-chevron-right {
-	opacity: .5
-}
-
-.bs-docs-sidenav.affix {
-	top: 10px
-}
-
-.bs-docs-sidenav.affix-bottom {
-	position: absolute;
-	top: auto;
-	bottom: 270px;
-}
-
-
-/* Responsive
-         -------------------------------------------------- */
-
-.affix {
-	top: 0px
-}
-
-#media {
-	margin-top: 30px
-}
-
-#media .header {
-	margin-left: 0;
-	margin-bottom: 30px;
-	margin-top: 15px;
-}
-
-#media .post_row {
-	margin-left: 0;
-	margin-bottom: 40px;
-}
-
-#media .lastpost_row {
-	margin-bottom: 0
-}
-
-#media .post_row .post {
-	background: #fff;
-	/*margin-left: 0;;
-    margin-right: 20px;*/
-	border-radius: 4px;
-	box-shadow: 1px 1px 2px 0px #E0E0E0;
-	width: 70%;
-	max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    height: auto;
-    min-height: 616px;
-}
-
-#media .post_row .last {
-	margin-right: 0
-}
-
-#media .post_row .post .img {
-	position: relative;
-	text-align: center;
-}
-
-#media .post_row .post .img .date {
-	background: #E8554E;
-	position: absolute;
-	padding: 2px 5px;
-	top: 0;
-	left: 11px;
-}
-
-#media .post_row .post .img .date p {
-	color: #fff;
-	font-size: 14px;
-	font-weight: bold;
-	font-style: italic;
-	margin: 0;
-}
-
-#media .post_row .post .img img {
-	height: auto;
-	width: 60%;
-}
-
-#media .post_row .post .text {
-	margin: 18px auto 0;
-	width: 90%;
-}
-
-#media .post_row .post .text h5 {
-	margin: 0 0 8px 0;
-	font-size: 20px;
-	line-height: 23px;
-}
-
-#media .post_row .post .text h5 a {
-	color: #333
-}
-
-#media .post_row .post .text span.date {
-	color: #9F9F9F;
-	display: block;
-	margin-bottom: 12px;
-	font-style: italic;
-	font-size: 13px;
-}
-
-#media .post_row .post .text p {
-	margin: 0;
-	line-height: 21px;
-	font-size: 14px;
-}
-
-#media .post_row .post .author_box {
-	margin: 12px auto 20px;
-	border-top: 1px solid #EDEDED;
-	overflow: hidden;
-	text-align: left;
-	width: 85%;
-	padding-top: 12px;
-} 
-
-#media .post_row .post .author_box h6 {
-	margin: 0 0 3px 0;
-	font-size: 13px;
-	line-height: 15px;
-	font-style: italic;
-	font-weight: normal;
-	color: #B2B2B2;
-}
-
-#media .post_row .post .author_box p {
-	color: #B2B2B2;
-	font-style: italic;
-	font-size: 13px;
-	line-height: 14px;
-	margin: 0;
-}
-
-#media .post_row .post .author_box img {
-	float: right
-}
-
-#media .post_row .post a.plus_wrapper {
-	width: 99%;
-	text-align: center;
-	background: #fff;
-	display: none;
-	border-radius: 0px 0px 4px 4px;
-	padding: 6px 0px 2px;
-	margin: 0 auto 1px;
-}
-
-#media .post_row .post a.plus_wrapper span {
-	color: #1189D9;
-	font-size: 30px;
-	font-weight: bold;
-}
-
-#media .post_row .post:hover a.plus_wrapper {
-	display: block
-}
-
-#media .post_row .post:hover {
-	box-shadow: 0px 1px 5px 1px rgb(216, 216, 216)
-}
-
-#media .post_row .post:hover .text h5 a {
-	color: #1189D9
-}
-
-.map .box_wrapp {
-	position: absolute;
-	margin: 15px auto;
-	box-shadow: 0 0 7px 0 rgba(26, 26, 26, 0.4);
-	padding: 30px 0 30px;
-	background: white;
-	border-radius: 4px;
-	margin-top: 25px;
-}
-
-.map .box_wrapp .box_cont {
-	margin: 30px auto;
-	width: 76%;
-}
-
-.section-header {
-	text-align: center;
-	margin-bottom: 35px;
-}
-
-.section-header h1,
-.title-text {
-	font-weight: bold;
-	font-size: 30px;
-	margin: 12.5px 0;
-	font-weight: 100;
-	margin-bottom: 25px;
-	line-height: 100px;
-}
-
-.feature-item {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 默认轻微阴影 */
-    border-radius: 6px; /* 圆角 */
-    border: 1px solid #eaeaea; /* 轻微边框 */
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    transition: all 0.3s ease; /* 添加过渡动画 */
-}
-
-.feature-item:hover {
-    transform: translateY(-5px); /* 向上浮动5像素 */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* 更深的阴影 */
-    border-color: #ddd; /* 加深边框颜色 */
-}
-
-.feature-item img {
-	margin-left: 15px;
-	margin-right: 15px;
-	max-width: 90%;
-	height: 155px;
-}
-
-/* 为news卡片的date添加统一样式 */
-.feature-item .date {
-    display: block;
-    font-weight: bold;
-    font-size: 12px;
-    color: #4c4e4d; 
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-.feature-item h5 {
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 5px;
-	margin-bottom: 10px;
-}
-
-.feature-item p {
-	margin-left: 15px;
-	margin-right: 15px;
-	line-height: 1.2;
-	margin-top: 5px;
-}
-
-.feature-heading {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 15px;
-	margin-right: 15px;
-	height: 80px;
-	line-height: 1.3;
-}
-
-.feature-heading a:hover {
-	text-decoration: none;
-}
-
-.feature-button {
-	font-size: 16px;
-	background-image: none;
-	box-shadow: none;
-	margin-bottom: 10px;
-}
-
-.centered {
-	text-align: center;
-}
-
-.subhead {
-	text-align: left;
-	border-bottom: 1px solid #ddd;
-}
-
-.jumbotron {
-    position: relative;
-    padding: 45px 0px 35px 0px;
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-    background: #2E8B57;
-    background: -moz-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #2E8B57), color-stop(100%, #1C5D3A));
-    background: -webkit-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
-    background: -o-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
-    background: -ms-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
-    background: linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%) repeat;
-    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-    box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-}
-
-/* 固定 Logo 图片大小，并适配移动设备 */
-.jumbotron img {
-    width: 200px;          /* 固定宽度（可根据需要调整，如 180px / 220px） */
-    max-width: 100%;       /* 在窄屏幕上自动缩小，防止溢出 */
-    height: auto;          /* 高度自适应，保持原始比例 */
-    display: block;        /* 块级化，便于居中 */
-    margin: 0 auto;        /* 水平居中（父容器 .jumbotron 已有 text-align: center，但 block 需要 margin auto） */
-}
-
-.jumbotron:after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	opacity: .4;
-}
-
-.lead {
-	margin-bottom: 0px;
-	font-size: 21px;
-	font-weight: 200;
-	line-height: 15px;
-}
-
-img.float-left {
-	float: left;
-	margin-top: 9px;
-	margin-left: 0px;
-	margin-right: 30px;
-	margin-bottom: 12px;
-}
-
-img.float-right {
-	float: right;
-	margin-top: 9px;
-	margin-right: 0px;
-	margin-bottom: 12px;
-	margin-left: 30px;
-}
-
-img.publications-thumb {
-	width: 82px;
-	height: 100px;
-}
-
-.caption {
-	margin: 10px;
-}
-
-.responsive-video {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 60px;
-	overflow: hidden;
-}
-
-.responsive-video iframe,
-.responsive-video object,
-.responsive-video embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 93.5%;
-	height: 93.5%;
-}
-
-.video-caption {
-	margin: 10px;
-}
-
-.accordion {
-	margin-bottom: 20px;
-	margin-right: 40px;
-}
-
-.thumbnail>img.sponsor {
-	width: 212px;
-	height: 150px;
-}
-
-img.carousel-image {
-	width: 100%;
-}
-
-li.publication {
-	margin-bottom: 20px;
-}
-
-.page-header h3 a:hover {
-	text-decoration: none;
-}
-
-iframe.map-frame {
-	border: none;
-	overflow: hidden;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 0px;
-	margin-right: 0px;
-	height: 550px;
-	width: 100%;
-}
-
-ul.sponsors {
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
-
-#footer {
-	z-index: 10;
-	margin-top: 50px;
-	margin-bottom: 0px;
-	padding-bottom: 25px;
-	border-top-width: 8px;
-	border-top-style: solid;
-	border-top-color: #2F2F2F;
-	background-color: #2E8B57;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	text-align: center;
-}
-
-#footer h3 {
-	font-size: 19px;
-	text-transform: uppercase;
-	font-family: BebasNeueRegular;
-	color: #ffffff;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #ffffff;
-	line-height: 35px;
-	margin-bottom: 20px;
-	margin-top: 25px;
-	font-weight: normal;
-}
-
-#footer a img {
-	margin-top: 40px;
-}
-
-#footer p,
-#footer address {
-	color: #ffffff;
-	font-size: 11px;
-}
-
-
-/* 轮播图容器统一尺寸 */
-.carousel-inner {
-    height: 500px; /* 根据实际需求调整高度 */
-}
-
-/* 统一所有轮播图图片尺寸 */
-.carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 保持图片比例并填充容器 */
-    object-position: center; /* 确保图片居中显示 */
-}
-
-/* 确保轮播图项目高度继承 */
-.carousel-inner .item {
-    height: 100%;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .carousel-inner {
-        height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-inner {
-        height: 250px;
-    }
-}
-
-/* --- Workflow 页面图片并排样式 --- */
-.image-row {
-    margin-top: 25px;      /* 与上方说明文字保持间距 */
-    margin-bottom: 10px;
-}
-
-.image-row .span6 {
-    text-align: center;    /* 图片在列内居中（可选） */
-}
-
-.image-row img {
-    display: block;
-	width: 100%;           /* 图片宽度填满列 */
-    max-width: 100%;       /* 确保图片不超过父容器宽度 */
-    height: auto;          /* 高度自适应，保持原始比例 */
-    margin: 0 auto;        /* 水平居中 */
-    float: none;           /* 覆盖可能的浮动 */
-    /* 如果还有其他干扰样式，可以加上 !important，但不推荐滥用 */
-    /* 移除旧 workflow-img 的固定高度和最大宽度限制 */
-    max-width: 100% ;  /* 强制覆盖原有的 max-width:20% */
-    width: auto;
-    height: auto;
-}
-
-/* 针对小屏幕的微调（可选） */
-@media (max-width: 767px) {
-    .image-row {
-        margin-top: 15px;
-    }
-}
-
-/* 优化轮播图箭头样式 */
-.carousel-control {
-    width: 30px; /* 更小宽度 */
-    height: 30px; /* 更小高度 */
-    top: 50%;
-    transform: translateY(-50%);
-    background: none; /* 移除黑色背景 */
-    border: none; /* 移除边框 */
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.carousel-control:hover {
-    opacity: 1;
-    background: none; /* 确保悬停时也没有背景 */
-}
-
-/* 左箭头图标 */
-.carousel-control.left {
-    left: 15px; /* 距离左侧的距离 */
-    background-image: none; /* 移除默认背景图像 */
-}
-
-/* 右箭头图标 */
-.carousel-control.right {
-    right: 15px; /* 距离右侧的距离 */
-    background-image: none; /* 移除默认背景图像 */
-}
-
-/* 使用自定义箭头图标 */
-.carousel-control.left:before {
-    content: '<';
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.carousel-control.right:before {
-    content: '>';
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .carousel-control {
-        width: 25px;
-        height: 25px;
-    }
-    
-    .carousel-control.left:before,
-    .carousel-control.right:before {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-control {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .carousel-control.left:before,
-    .carousel-control.right:before {
-        font-size: 16px;
-    }
-}
-
-
-/* ===== 汉堡菜单按钮样式 ===== */
-.btn-navbar {
-  display: none;
-  float: right;
-  padding: 7px 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 8px;
-  background-color: #2E8B57;
-  background-image: none;
-  border: 1px solid #1C5D3A;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn-navbar:hover,
-.btn-navbar:active,
-.btn-navbar.active,
-.btn-navbar.disabled,
-.btn-navbar[disabled] {
-  background-color: #1C5D3A;
-}
-
-.btn-navbar .icon-bar {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: #f5f5f5;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.btn-navbar .icon-bar + .icon-bar {
-  margin-top: 3px;
-}
-
-/* 控制在不同设备上的显示 */
-.visible-phone {
-  display: none !important;
-}
-
-.visible-tablet {
-  display: none !important;
-}
-
-.hidden-phone {
-  display: block !important;
-}
-
-/* 手机设备（最大宽度 767px） */
-@media (max-width: 767px) {
-  .visible-phone {
-    display: block !important;
-  }
-  .hidden-phone {
-    display: none !important;
-  }
-  
-  .btn-navbar {
-    display: block;
-  }
-  
-  /* 确保导航栏在小屏幕上垂直排列 */
-  .nav-collapse .nav {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-collapse .nav > li {
-    display: block;
-    float: none;
-    width: 100%;
-  }
-  
-  .nav-collapse .nav > li > a {
-    display: block;
-    padding: 10px 15px;
-    border-left: 0;
-    border-right: 0;
-    text-align: left;
-    border-radius: 0;
-  }
-  
-  .nav-collapse .nav > li:first-child > a {
-    border-radius: 0;
-  }
-  
-  .nav-collapse .nav > li:last-child > a {
-    border-radius: 0;
-  }
-}
-
-/* 平板设备（宽度在 768px 到 979px 之间） */
-@media (min-width: 768px) and (max-width: 979px) {
-  .visible-tablet {
-    display: block !important;
-  }
-  
-  .btn-navbar {
-    display: block;
-  }
-  
-  /* 在平板上也使用垂直排列 */
-  .nav-collapse .nav {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-collapse .nav > li {
-    display: block;
-    float: none;
-    width: 100%;
-  }
-  
-  .nav-collapse .nav > li > a {
-    display: block;
-    padding: 10px 15px;
-    border-left: 0;
-    border-right: 0;
-    text-align: left;
-    border-radius: 0;
-  }
-}
-
-/* 电脑设备（最小宽度 980px） */
-@media (min-width: 980px) {
-  /* 确保汉堡按钮在电脑上隐藏 */
-  .btn-navbar {
-    display: none;
-  }
-  
-  /* 确保导航菜单在电脑上展开 */
-  .nav-collapse.collapse {
-    height: auto !important;
-    overflow: visible !important;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Sun Team - Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Dr. Sun's research team, Home, ">
+      <meta name="author" content="">
+      <!-- Le styles -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+      <link href="css/theme.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="container">
+         <!--页面最顶部开始-->
+         <header class="jumbotron subhead" id="overview">
+            <p class="lead"> Sun Lab </p>
+            <img src="images\logo_SunLab.PNG" alt="Sun Lab Logo">
+         </header>
+         <!--页面最顶部结束-->
+         <!--5个导航栏控件开始-->
+         <div class="masthead">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="container">
+                     <!-- 汉堡菜单按钮（仅在小屏幕上显示） -->
+                     <button class="btn btn-navbar visible-phone visible-tablet" data-toggle="collapse" data-target=".nav-collapse">                        
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                     <!-- 可折叠的导航菜单 -->
+                     <div class="nav-collapse collapse">
+                        <ul class="nav">
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="Team.html">Team</a></li>
+                           <li><a href="Research.html">Research</a></li>
+                           <li><a href="Workflow.html">Workflow</a></li>
+                           <li><a href="Blog.html">Blog</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--5个导航栏控件结束-->
+         <!--滚动轮播照片开始-->
+         <div class="row-fluid">
+            <div class="span12">
+               <div id="main-carousel" class="carousel slide">
+                  <div class="carousel-inner">
+                     <div class="item active">
+                        <img src="images\Home\Home_photo\Home.png" class="carousel-image" alt="">                      
+                        <div class="carousel-caption">
+                           <h4>Welcome to Sun Lab!</h4>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <img src="images\Home\Home_photo\Home2.png" class="carousel-image" alt="">
+                        <div class="carousel-caption">
+                           <h4>Team Photos</h4>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <a href="http://isteminquiry.com/"><img src="images\Home\Home_photo\STEM.jpg" class="carousel-image" alt=""></a>
+                        <div class="carousel-caption">
+                           <h4><a href="http://isteminquiry.com/">i-STEM</a></h4>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <a href="https://www.scaffoldia.com/zh-hans/"><img src="images\Home\Home_photo\math.jpg" class="carousel-image" alt=""></a>
+                        <div class="carousel-caption">
+                           <h4><a href="https://www.scaffoldia.com/zh-hans/">Scaffoldia MyMaths</a></h4>
+                        </div>
+                     </div>
+                  </div>
+                  <a class="left carousel-control" href="#main-carousel" data-slide="prev"></a>
+                  <a class="right carousel-control" href="#main-carousel" data-slide="next"></a>
+               </div>
+            </div>
+         </div>
+         <!--滚动轮播照片结束-->
+         <div class="container-fluid">
+            <!--Sun Team简介开始-->
+            <div class="row-fluid marketing">
+               <div class="span12">
+                  <h5>
+                     Led by Dr. Sun Daner, our lab at The Education University of Hong Kong explores the transformative potential of emerging technologies in education. We focus on AI-powered learning systems, technology-enhanced STEM education, and innovative pedagogical approaches that foster higher-order thinking across disciplines. Our work bridges educational research and real-world implementation—from developing ScaffoldiaMyMaths <a href="https://www.scaffoldia.com/zh-hans/">(https://www.scaffoldia.com/zh-hans/)</a> with adaptive AI scaffolding for students with mathematics learning difficulties, to creating iSTEM <a href="http://isteminquiry.com/">(http://isteminquiry.com/)</a>, a design thinking-driven platform for aerospace-focused STEM education. Through rigorous research and meaningful collaboration with schools and communities, we strive to create equitable, evidence-based educational solutions that prepare learners for an AI-driven future. 
+                     <p>
+                     Join us in reimagining education for the 21st century. Please feel free to contact us via email at: sunteam2026@gmail.com.
+                     </p>
+                  </h5>
+                  <hr>
+               </div>
+               <!--Sun Team简介结束-->
+               <!--Latest News开始-->
+               <div class="row-fluid">
+                  <h2 class="centered">Latest News</h2>
+               <div class="span4 feature-item">
+                  <span class="date"> January, 2026 </span>
+                  <h5 class="feature-heading">
+                     Dr. Sun Daner's Research Team Visits Shenzhen Hong Kong Pui Kiu College Longhua Xinyi School to Explore Research Collaboration
+                  </h5>
+                  <div class="centered">
+                     <img src="images\Home\Home_news\Jan2026.png" alt="">
+                  </div>
+                  <p>
+                     Dr. Sun Daner and her research team visited Shenzhen Hong Kong Pui Kiu College Longhua Xinyi School in Longhua District, Shenzhen, to discuss potential experimental collaboration opportunities. 
+                     <br/>
+                     <br/>
+                     <br/>
+                  </p>
+               </div>
+               <div class="span4 feature-item">
+                  <span class="date"> November, 2025 </span>
+                  <h5 class="feature-heading">
+                     Make maths yours: ScaffoldiaMyMaths delivers personalised pathways
+                     <br/>
+                  </h5>
+                  <div class="centered">
+                     <a href="https://flassnews.eduhk.hk/newsletter_article/November_2025_ISSUE_13/Make%20maths%20yours:%20ScaffoldiaMyMaths%20delivers%20personalised%20pathways">
+                        <img src="images\Home\Home_news\Nov202501.png" alt="">
+                     </a>
+                  </div>
+                  <p>
+                     Dr. Sun led her research team in developing ScaffoldiaMyMaths, an adaptive scaffolding-based learning platform that provides personalised mathematics support for primary students in Grades 3-6 from low-resource families in Mainland China and Hong Kong. <a href="https://flassnews.eduhk.hk/newsletter_article/November_2025_ISSUE_13/Make%20maths%20yours:%20ScaffoldiaMyMaths%20delivers%20personalised%20pathways">[Read More]</a>
+                  </p>
+               </div>
+               <div class="span4 feature-item">
+                  <span class="date"> November, 2025 </span>
+                  <h5 class="feature-heading">
+                     Dr. Sun Daner's Research Team Hosts Workshop with Professor Alexandra Cristea from Durham University
+                  </h5>
+                  <div class="centered">
+                     <img src="images\Home\Home_news\Nov202502.png" alt="">
+                  </div>
+                  <p>
+                     Dr. Sun Daner's Research Team hosted a collaborative workshop with Professor Alexandra Cristea from Durham University. The exchange of ideas covered topics including personalized learning technologies, intelligent tutoring systems, and user modeling in educational contexts.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+      <!--页脚开始-->
+      <footer id="footer" style="border-top: none;">
+         <div class="container-fluid">
+            <div class="row-fluid" style="border-top: none; display: flex; align-items: center;">
+               <div class="span6" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+                  <div class="logo-container" style="display: flex; align-items: center; margin-bottom: 15px; justify-content: center;">
+                  <!--左边两个logo-->
+                     <img src="images\logo-eduhk.webp" alt="The Education University of Hong Kong Logo" style="height: 60px; margin-right: 20px;">
+                     <img src="images\logo_mit.svg" alt="Department of Mathematics and Information Technology Logo" style="height: 60px;">
+                  </div>
+                  <p style="font-weight: bold; margin: 0; text-align: center;">
+                  <!--logo下方的文字-->
+                     Department of Mathematics and Information Technology<br>
+                     The Education University of Hong Kong
+                  </p>
+               </div>
+               <!--页脚右边Contact Information部分-->
+               <div class="span6" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+                  <div style="width: 100%; max-width: 400px;"></div>
+                     <h3 style="border-bottom: none; margin-bottom: 5px;">Contact Information</h3>
+                     <div style="text-align: left;">
+                        <p style="margin-bottom: 5px;"><b>Email: </b>sunteam2026@gmail.com</p>
+                        <p style="margin-bottom: 5px;">
+                           <b>Location: </b>The Education University of Hong Kong<br>
+                           10 Lo Ping Road, Tai Po, New Territories
+                        </p>
+                        <p><a href="http://maps.google.com/" style="color: white;">Show Map</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- Javascript files -->
+      <script src="js/jquery-1.9.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script> $('#main-carousel').carousel(); </script>
+      <script>
+        // 确保导航栏响应式功能正常工作
+        $(document).ready(function() {
+          // 当窗口大小改变时，重新计算导航栏
+         $(window).resize(function() {
+            if ($(window).width() >= 980) {
+              $('.nav-collapse').removeClass('in');
+            }
+         });
+        });
+      </script>
+   </body>
+</html>
