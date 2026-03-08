@@ -424,7 +424,7 @@ body>.navbar .brand:hover {
 
 .jumbotron {
     position: relative;
-    padding: 15px 0px 5px 0px;
+    padding: 10px 0px 10px 0px;
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
@@ -447,6 +447,7 @@ body>.navbar .brand:hover {
     height: auto;          /* 高度自适应，保持原始比例 */
     display: block;        /* 块级化，便于居中 */
     margin: 0 auto;        /* 水平居中（父容器 .jumbotron 已有 text-align: center，但 block 需要 margin auto） */
+	margin-bottom: 0;
 }
 
 .jumbotron:after {
