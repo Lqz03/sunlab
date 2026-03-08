@@ -450,6 +450,12 @@ body>.navbar .brand:hover {
 	margin-bottom: 0;
 }
 
+.jumbotron h3 {
+    margin-top: 0;
+    margin-bottom: 5px;      /* 可根据喜好调整，0 则完全紧贴 */
+    line-height: 1.2;
+}
+
 .jumbotron:after {
 	content: '';
 	display: block;
