@@ -440,6 +440,15 @@ body>.navbar .brand:hover {
     box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
 }
 
+/* 固定 Logo 图片大小，并适配移动设备 */
+.jumbotron img {
+    width: 200px;          /* 固定宽度（可根据需要调整，如 180px / 220px） */
+    max-width: 100%;       /* 在窄屏幕上自动缩小，防止溢出 */
+    height: auto;          /* 高度自适应，保持原始比例 */
+    display: block;        /* 块级化，便于居中 */
+    margin: 0 auto;        /* 水平居中（父容器 .jumbotron 已有 text-align: center，但 block 需要 margin auto） */
+}
+
 .jumbotron:after {
 	content: '';
 	display: block;
