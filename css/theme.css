@@ -446,7 +446,7 @@ body>.navbar .brand:hover {
     max-width: 100%;       /* 在窄屏幕上自动缩小，防止溢出 */
     height: auto;          /* 高度自适应，保持原始比例 */
     display: block;        /* 块级化，便于居中 */
-    margin: 0 auto;        /* 水平居中（父容器 .jumbotron 已有 text-align: center，但 block 需要 margin auto） */
+    margin: 10px auto 0;  /* 上边距 20px，左右 auto，下边距 0 */
 }
 
 .jumbotron:after {
