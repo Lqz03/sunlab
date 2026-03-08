@@ -424,7 +424,7 @@ body>.navbar .brand:hover {
 
 .jumbotron {
     position: relative;
-    padding: 45px 0px 35px 0px;
+    padding: 15px 0px 10px 0px;
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
@@ -442,7 +442,7 @@ body>.navbar .brand:hover {
 
 /* 固定 Logo 图片大小，并适配移动设备 */
 .jumbotron img {
-    width: 70px;          /* 固定宽度
+    width: 100px;          /* 固定宽度
     max-width: 100%;       /* 在窄屏幕上自动缩小，防止溢出 */
     height: auto;          /* 高度自适应，保持原始比例 */
     display: block;        /* 块级化，便于居中 */
