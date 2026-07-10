@@ -426,7 +426,15 @@ body>.navbar .brand:hover {
 
 .jumbotron {
     position: relative;
-    padding: 10px 0px 10px 0px;
+    height: 100vh;                     /* 佔滿整個視口高度 */
+    min-height: 100vh;                 /* 確保高度至少為視口高度 */
+    display: flex;                     /* 啟用彈性盒 */
+    flex-direction: column;            /* 垂直排列內容 */
+    justify-content: center;           /* 垂直居中 */
+    align-items: center;               /* 水平居中 */
+    margin-left: -5px;                 /* 抵消 .container 的左內距 */
+    margin-right: -5px;                /* 抵消 .container 的右內距 */
+    padding: 0;                        /* 移除內距，讓內容完全置中 */
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
