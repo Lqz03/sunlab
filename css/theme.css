@@ -7,8 +7,10 @@ body {
 /* Custom container */
 
 .container {
-	margin: 0 auto;
-	max-width: 1000px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .container>hr {
