@@ -634,7 +634,7 @@ ul.sponsors {
 
 /* --- Workflow 页面图片并排样式 --- */
 .image-row {
-    margin-top: 25px;      /* 与上方说明文字保持间距 */
+    margin-top: 15px;      /* 与上方说明文字保持间距 */
     margin-bottom: 10px;
 }
 
@@ -645,7 +645,7 @@ ul.sponsors {
 .image-row img {
     display: block;
 	width: 90%;           /* 图片宽度填满列 */
-    max-width: 100%;       /* 确保图片不超过父容器宽度 */
+    max-width: 90%;       /* 确保图片不超过父容器宽度 */
     height: auto;          /* 高度自适应，保持原始比例 */
     margin: 0 auto;        /* 水平居中 */
     float: none;           /* 覆盖可能的浮动 */
