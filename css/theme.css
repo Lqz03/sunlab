@@ -10,8 +10,8 @@ body {
 .container {
     width: 100% !important;
     max-width: 100% !important;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
     box-sizing: border-box;
 }
 
@@ -111,7 +111,7 @@ body>.navbar .brand:hover {
 }
 
 .bs-docs-sidenav {
-    width: 140px;  
+    width: 160px;  
     margin: 20px 0 0; 
     padding: 0;
     background-color: #fff;
@@ -125,20 +125,20 @@ body>.navbar .brand:hover {
 
 .bs-docs-sidenav > li > a {
     display: block;
-    width: 120px; 
+    width: 140px; 
     margin: 0 0 -1px;
     padding: 5px 10px;  
     border: 1px solid #e5e5e5;
-    font-size: 10px;  
+    font-size: 14px;  
 }
 
 .bs-docs-sidenav > li > a.subhead {
     display: block;
-    width: 100px;  
+    width: 120px;  
     margin: 0 0 -1px;
     padding: 6px 20px;  
     border: 1px solid #e5e5e5;
-    font-size: 9px;  
+    font-size: 13px;  
 }
 
 .bs-docs-sidenav>li:first-child>a {
