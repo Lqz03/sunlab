@@ -112,15 +112,10 @@
             clear: both;
             display: table;
          }      
-         #research-staff .member-photo {
-            float: none;          /* 取消左浮动 */
-            display: block;       /* 块级化，照片独占一行 */
-            margin: 0 0 15px 0;   /* 下边距留白，与文字分开 */
-         }
-
          #research-staff .member-content {
-            clear: both;          /* 确保内容在照片下方开始 */
-            text-align: justify;  /* 保持原有的两端对齐（与全局一致） */
+            margin-left: 125px;          /* 图片宽度100px + 右侧间距25px，让内容起始于图片右侧 */
+            overflow: hidden;            /* 防止内容溢出，确保块级上下文 */
+            text-align: justify;         /* 保持段落两端对齐（与全局一致） */
          }
       </style>
    </head>
