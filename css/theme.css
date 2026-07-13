@@ -733,14 +733,14 @@ ul.sponsors {
 
 /* 轮播图容器统一尺寸 */
 .carousel-inner {
-    height: 550px; /* 根据实际需求调整高度 */
+    height: 500px; /* 根据实际需求调整高度 */
 }
 
 /* 统一所有轮播图图片尺寸 */
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 保持图片比例并填充容器 */
+    object-fit: contain; /* 保持图片比例并填充容器 */
     object-position: center; /* 确保图片居中显示 */
 }
 
