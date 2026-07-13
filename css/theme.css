@@ -732,7 +732,7 @@ ul.sponsors {
 
 /* 轮播图容器统一尺寸 */
 .carousel-inner {
-    width: 100%;
+    height: 500px;
     aspect-ratio: 16 / 9;  /* 宽高比 16:9，高度由宽度自动计算 */
 }
 
