@@ -746,7 +746,7 @@ ul.sponsors {
 
 /* 确保轮播图项目高度继承 */
 .carousel-inner .item {
-    height: 100%;
+    height: 60%;
 }
 
 
