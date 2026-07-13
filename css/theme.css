@@ -582,44 +582,156 @@ ul.sponsors {
 	margin-bottom: 40px;
 }
 
+/* ============================================================
+   底部 Footer - 紧凑样式（与顶部 Jumbotron 等高）
+   ============================================================ */
 #footer {
-	z-index: 10;
-	margin-top: 50px;
-	margin-bottom: 0px;
-	padding-bottom: 25px;
-	border-top-width: 8px;
-	border-top-style: solid;
-	border-top-color: #2F2F2F;
-	background-color: #2E8B57;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	text-align: center;
+    margin-top: 15px;              /* 从 50px 减小，减少上方空白 */
+    padding: 8px 0 8px 0;          /* 上下内边距统一，与 Jumbotron 的 10px 接近 */
+    background-color: #2E8B57;
+    border: 0;
+    text-align: center;
 }
 
+/* ---- Footer 内 Logo 容器 ---- */
+#footer .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;            /* 从 15px 减小 */
+}
+
+#footer .logo-container img {
+    height: 40px;                  /* 从 60px 减小 */
+    width: auto;
+    margin-right: 15px;
+}
+
+#footer .logo-container img:last-child {
+    margin-right: 0;
+}
+
+/* ---- Footer 内文字 ---- */
+#footer p {
+    font-size: 10px;               /* 从 11px 略减 */
+    line-height: 1.3;              /* 行距收紧 */
+    margin: 0 0 2px 0;             /* 底部间距减小 */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ---- Footer 内 Contact Information 标题 ---- */
 #footer h3 {
-	font-size: 19px;
-	text-transform: uppercase;
-	font-family: BebasNeueRegular;
-	color: #ffffff;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #ffffff;
-	line-height: 35px;
-	margin-bottom: 20px;
-	margin-top: 25px;
-	font-weight: normal;
+    font-size: 14px;               /* 从 19px 减小 */
+    line-height: 1.2;              /* 行距收紧 */
+    margin: 3px 0 3px 0;           /* 从 25px 20px 大幅减小 */
+    padding-bottom: 0;
+    border-bottom: none;
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
-#footer a img {
-	margin-top: 40px;
+/* ---- Footer 内联系信息条目 ---- */
+#footer .span6 > div > p {
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 0 0 2px 0;
+    text-align: left;              /* 保持左对齐 */
 }
 
-#footer p,
 #footer address {
-	color: #ffffff;
-	font-size: 11px;
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 0 0 2px 0;
+    color: #ffffff;
+}
+
+#footer .span6 a {
+    font-size: 10px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ---- Footer 内两列布局微调 ---- */
+#footer .span6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* 垂直居中内容 */
+    height: 100%;
+}
+
+/* 左侧列（Logo + 校名） */
+#footer .span6:first-child {
+    align-items: center;
+}
+
+/* 右侧列（Contact Information） */
+#footer .span6:last-child {
+    align-items: flex-start;      /* 左对齐 */
+    padding-left: 20px;           /* 与左侧保持间距 */
+}
+
+/* 右侧列内部容器 */
+#footer .span6:last-child > div {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ---- 响应式：小屏幕下两列叠放 ---- */
+@media (max-width: 767px) {
+    #footer {
+        padding: 10px 0;
+    }
+
+    #footer .span6 {
+        align-items: center !important;
+        padding-left: 0 !important;
+        text-align: center;
+    }
+
+    #footer .span6:last-child > div {
+        text-align: center;
+    }
+
+    #footer .span6:last-child > div > p {
+        text-align: center !important;
+    }
+
+    #footer .logo-container img {
+        height: 35px;
+        margin-right: 12px;
+    }
+
+    #footer h3 {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    #footer p,
+    #footer .span6 > div > p,
+    #footer address,
+    #footer .span6 a {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer .logo-container img {
+        height: 28px;
+        margin-right: 8px;
+    }
+
+    #footer h3 {
+        font-size: 12px;
+    }
+
+    #footer p,
+    #footer .span6 > div > p,
+    #footer address,
+    #footer .span6 a {
+        font-size: 8px;
+    }
 }
 
 
