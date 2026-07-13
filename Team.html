@@ -41,8 +41,9 @@
          }
          
          .member-content {
-            /* 不再使用overflow: hidden，让文字自然环绕 */
-            text-align: justify;
+            margin-left: 125px;      /* 图片宽度100px + 右侧间距25px，让内容起始于图片右侧 */
+            overflow: hidden;        /* 创建块级上下文，阻止文字环绕图片 */
+            text-align: justify;     /* 保持段落两端对齐 */
          }
          
          /* 优化段落显示 */
@@ -77,46 +78,23 @@
             margin-bottom: 5px;
          }
          
-         /* 手机端优化 */
          @media (max-width: 767px) {
-            .member-photo {
-                float: none;
-                margin-right: 0;
-                margin-bottom: 20px;
-                width: 150px;
-                height: 210px;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .member-photo img {
-               display: inline-block;
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-            }
-            
-            .member-photo a {
-               height: 100%;
-            }
+    .member-photo {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 210px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-            .member-content {
-                clear: both;
-            }
-         }
-         
-         /* 清除浮动 */
-         .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-         }      
-         #research-staff .member-content {
-            margin-left: 125px;          /* 图片宽度100px + 右侧间距25px，让内容起始于图片右侧 */
-            overflow: hidden;            /* 防止内容溢出，确保块级上下文 */
-            text-align: justify;         /* 保持段落两端对齐（与全局一致） */
-         }
+    .member-content {
+        clear: both;
+        margin-left: 0;      /* 新增：手机上重置左边距 */
+    }
+}
       </style>
    </head>
    <body>
@@ -626,8 +604,8 @@
                <!--页脚右边Contact Information部分-->
                <div class="span6" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
                   <div style="width: 100%; max-width: 400px;"></div>
-                     <h3 style="border-bottom: none; margin-bottom: 5px;">Contact Information</h3>
                      <div style="text-align: left;">
+                        <h3 style="border-bottom: none; margin-bottom: 5px;">Contact Information</h3>
                         <p style="margin-bottom: 5px;"><b>Email: </b>sunteam2026@gmail.com</p>
                         <p style="margin-bottom: 5px;">
                            <b>Location: </b>The Education University of Hong Kong<br>
