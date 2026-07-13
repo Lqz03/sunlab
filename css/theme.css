@@ -583,14 +583,15 @@ ul.sponsors {
 }
 
 /* ============================================================
-   底部 Footer - 紧凑样式（与顶部 Jumbotron 等高）
+   底部 Footer - 紧凑、左对齐、Arial 字体
    ============================================================ */
 #footer {
-    margin-top: 15px;              /* 从 50px 减小，减少上方空白 */
-    padding: 8px 0 8px 0;          /* 上下内边距统一，与 Jumbotron 的 10px 接近 */
+    margin-top: 15px;
+    padding: 8px 0 8px 0;
     background-color: #2E8B57;
     border: 0;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一字体 */
 }
 
 /* ---- Footer 内 Logo 容器 ---- */
@@ -598,103 +599,97 @@ ul.sponsors {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4px;            /* 从 15px 减小 */
+    margin-bottom: 4px;
 }
 
 #footer .logo-container img {
-    height: 40px;                  /* 从 60px 减小 */
+    height: 40px;
     width: auto;
     margin-right: 15px;
 }
-
 #footer .logo-container img:last-child {
     margin-right: 0;
 }
 
-/* ---- Footer 内文字 ---- */
-#footer p {
-    font-size: 10px;               /* 从 11px 略减 */
-    line-height: 1.3;              /* 行距收紧 */
-    margin: 0 0 2px 0;             /* 底部间距减小 */
+/* ---- 左侧文字（学校名称） ---- */
+#footer .span6:first-child p {
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 0 0 2px 0;
     color: #ffffff;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一 */
+    text-align: center;                           /* 左侧部分保持居中 */
 }
 
-/* ---- Footer 内 Contact Information 标题 ---- */
-#footer h3 {
-    font-size: 14px;               /* 从 19px 减小 */
-    line-height: 1.2;              /* 行距收紧 */
-    margin: 3px 0 3px 0;           /* 从 25px 20px 大幅减小 */
+/* ---- 右侧 Contact Information 区块 ---- */
+#footer .span6:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;        /* 整体左对齐 */
+    padding-left: 20px;             /* 与左侧保持视觉间距 */
+    text-align: left;               /* 所有文字左对齐 */
+}
+
+/* 右侧内部容器（用于限制宽度） */
+#footer .span6:last-child > div {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;              /* 强制左对齐 */
+}
+
+/* ---- 右侧标题 ---- */
+#footer .span6:last-child h3 {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 3px 0 3px 0;
     padding-bottom: 0;
     border-bottom: none;
     color: #ffffff;
     font-weight: normal;
     text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一 */
+    text-align: left;              /* 标题左对齐 */
 }
 
-/* ---- Footer 内联系信息条目 ---- */
-#footer .span6 > div > p {
-    font-size: 10px;
-    line-height: 1.3;
-    margin: 0 0 2px 0;
-    text-align: left;              /* 保持左对齐 */
-}
-
-#footer address {
+/* ---- 右侧详情文字 ---- */
+#footer .span6:last-child p,
+#footer .span6:last-child address,
+#footer .span6:last-child a {
     font-size: 10px;
     line-height: 1.3;
     margin: 0 0 2px 0;
     color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一 */
+    text-align: left;              /* 内容左对齐 */
 }
 
-#footer .span6 a {
-    font-size: 10px;
-    color: #ffffff;
+#footer .span6:last-child a {
     text-decoration: underline;
 }
 
-/* ---- Footer 内两列布局微调 ---- */
-#footer .span6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;       /* 垂直居中内容 */
-    height: 100%;
-}
-
-/* 左侧列（Logo + 校名） */
-#footer .span6:first-child {
-    align-items: center;
-}
-
-/* 右侧列（Contact Information） */
-#footer .span6:last-child {
-    align-items: flex-start;      /* 左对齐 */
-    padding-left: 20px;           /* 与左侧保持间距 */
-}
-
-/* 右侧列内部容器 */
-#footer .span6:last-child > div {
-    width: 100%;
-    max-width: 400px;
-}
-
-/* ---- 响应式：小屏幕下两列叠放 ---- */
+/* ---- 响应式：小屏幕下叠放并居中（可选） ---- */
 @media (max-width: 767px) {
     #footer {
         padding: 10px 0;
     }
 
-    #footer .span6 {
+    #footer .span6:first-child,
+    #footer .span6:last-child {
         align-items: center !important;
         padding-left: 0 !important;
-        text-align: center;
+        text-align: center !important;
     }
 
     #footer .span6:last-child > div {
-        text-align: center;
+        text-align: center !important;
     }
 
-    #footer .span6:last-child > div > p {
+    #footer .span6:last-child h3,
+    #footer .span6:last-child p,
+    #footer .span6:last-child address,
+    #footer .span6:last-child a {
         text-align: center !important;
     }
 
@@ -703,15 +698,15 @@ ul.sponsors {
         margin-right: 12px;
     }
 
-    #footer h3 {
+    #footer .span6:last-child h3 {
         font-size: 13px;
         margin-top: 8px;
     }
 
-    #footer p,
-    #footer .span6 > div > p,
-    #footer address,
-    #footer .span6 a {
+    #footer .span6:first-child p,
+    #footer .span6:last-child p,
+    #footer .span6:last-child address,
+    #footer .span6:last-child a {
         font-size: 9px;
     }
 }
@@ -722,14 +717,14 @@ ul.sponsors {
         margin-right: 8px;
     }
 
-    #footer h3 {
+    #footer .span6:last-child h3 {
         font-size: 12px;
     }
 
-    #footer p,
-    #footer .span6 > div > p,
-    #footer address,
-    #footer .span6 a {
+    #footer .span6:first-child p,
+    #footer .span6:last-child p,
+    #footer .span6:last-child address,
+    #footer .span6:last-child a {
         font-size: 8px;
     }
 }
