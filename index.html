@@ -194,5 +194,46 @@
          });
         });
       </script>
+      <script>
+      (function() {
+         'use strict';
+
+         // 获取两个绿色区域
+         var header = document.querySelector('.jumbotron');
+         var footer = document.querySelector('#footer');
+
+         if (!header || !footer) return;
+
+         function equalizeHeights() {
+            // 先重置 min-height，获取自然高度
+            header.style.minHeight = '';
+            footer.style.minHeight = '';
+
+            // 获取实际高度（含 padding & border）
+            var hH = header.offsetHeight;
+            var fH = footer.offsetHeight;
+
+            // 取两者最大值
+            var maxH = Math.max(hH, fH);
+
+            // 若高度差 > 2px 则调整，避免频繁重排
+            if (Math.abs(hH - fH) > 2) {
+                  header.style.minHeight = maxH + 'px';
+                  footer.style.minHeight = maxH + 'px';
+            }
+         }
+
+         // 页面完全加载后执行
+         window.addEventListener('load', equalizeHeights);
+
+         // 窗口大小变化时重新计算（防抖）
+         var timer = null;
+         window.addEventListener('resize', function() {
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(equalizeHeights, 200);
+         });
+
+      })();
+      </script>
    </body>
 </html>
