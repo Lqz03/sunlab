@@ -732,7 +732,8 @@ ul.sponsors {
 
 /* 轮播图容器统一尺寸 */
 .carousel-inner {
-    height: 500px; /* 根据实际需求调整高度 */
+    width: 100%;
+    aspect-ratio: 16 / 9;  /* 宽高比 16:9，高度由宽度自动计算 */
 }
 
 /* 统一所有轮播图图片尺寸 */
@@ -748,18 +749,6 @@ ul.sponsors {
     height: 100%;
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .carousel-inner {
-        height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-inner {
-        height: 250px;
-    }
-}
 
 /* --- Workflow 页面图片并排样式 --- */
 .image-row {
