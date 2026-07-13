@@ -740,7 +740,7 @@ ul.sponsors {
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: fill; /* 保持图片比例并填充容器 */
+    object-fit: contain; /* 保持图片比例并填充容器 */
     object-position: center; /* 确保图片居中显示 */
 }
 
