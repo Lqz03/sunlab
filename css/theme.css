@@ -462,6 +462,13 @@ body>.navbar .brand:hover {
     -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
     box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+    height: 180px;                      /* 固定高度 */
+    display: flex;                      /* 启用 flex 布局 */
+    flex-direction: column;             /* 纵向排列子元素 */
+    justify-content: center;            /* 垂直居中 */
+    align-items: center;                /* 水平居中 */
+    padding: 10px 0;                    /* 上下内边距微调 */
+    box-sizing: border-box;             /* 高度包含 padding 和 border */
 }
 
 /* 固定 Logo 图片大小，并适配移动设备 */
@@ -596,7 +603,13 @@ ul.sponsors {
 	font: inherit;
 	vertical-align: baseline;
 	text-align: center;
-}
+    height: 180px;                      /* 与顶部相同的高度 */
+    display: flex;                      /* 启用 flex 布局 */
+    flex-direction: column;             /* 纵向排列 */
+    justify-content: center;            /* 垂直居中 */
+    align-items: center;                /* 水平居中 */
+    padding: 10px 0;                    /* 上下内边距微调 */
+    box-sizing: border-box;             /* 高度包含 padding 和 border */ 
 
 #footer h3 {
 	font-size: 19px;
@@ -901,4 +914,32 @@ ul.sponsors {
     height: auto !important;
     overflow: visible !important;
   }
+}
+
+/* ===== 底部内部容器适配等高布局 ===== */
+#footer .container-fluid {
+    width: 100%;
+    height: 100%;                       /* 撑满父容器高度 */
+    display: flex;
+    align-items: center;                /* 垂直居中内部行 */
+    justify-content: center;
+}
+
+#footer .row-fluid {
+    width: 100%;
+    display: flex;
+    align-items: center;                /* 左右两列垂直居中 */
+    justify-content: space-between;     /* 左右分散对齐 */
+    flex-wrap: wrap;                   /* 窄屏时允许换行 */
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* 左右两列内部也垂直居中 */
+#footer .span6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
