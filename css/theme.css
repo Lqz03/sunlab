@@ -623,7 +623,7 @@ ul.sponsors {
 
 /* ---- 左侧文字（学校名称） ---- */
 #footer .span6:first-child p {
-    font-size: 10px;
+    font-size: 16px;
     line-height: 1.3;
     margin: 0 0 2px 0;
     color: #ffffff;
@@ -638,7 +638,7 @@ ul.sponsors {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;        /* 整体左对齐 */
-    padding-left: 20px;             /* 与左侧保持视觉间距 */
+    padding-left: 15px;             /* 与左侧保持视觉间距 */
     text-align: left;               /* 所有文字左对齐 */
 }
 
@@ -651,7 +651,7 @@ ul.sponsors {
 
 /* ---- 右侧标题 ---- */
 #footer .span6:last-child h3 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.2;
     margin: 3px 0 3px 0;
     padding-bottom: 0;
@@ -667,8 +667,8 @@ ul.sponsors {
 #footer .span6:last-child p,
 #footer .span6:last-child address,
 #footer .span6:last-child a {
-    font-size: 10px;
-    line-height: 1.3;
+    font-size: 15px;
+    line-height: 1.2;
     margin: 0 0 2px 0;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;   /* 统一 */
