@@ -440,6 +440,12 @@ body>.navbar .brand:hover {
 	margin-bottom: 10px;
 }
 
+.marketing h5 {
+    font-size: 18px;          /* 👈 新增 */
+    line-height: 1.8;         /* 行距稍大，更易读 */
+    font-weight: normal;
+}
+
 .centered {
 	text-align: center;
 }
