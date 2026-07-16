@@ -651,8 +651,8 @@ ul.sponsors {
 
 /* ---- 右侧标题 ---- */
 #footer .span6:last-child h3 {
-    font-size: 16px;
-    line-height: 1.2;
+    font-size: 17px;
+    line-height: 1.5;
     margin: 3px 0 3px 0;
     padding-bottom: 0;
     border-bottom: none;
@@ -667,7 +667,7 @@ ul.sponsors {
 #footer .span6:last-child p,
 #footer .span6:last-child address,
 #footer .span6:last-child a {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.2;
     margin: 0 0 2px 0;
     color: #ffffff;
