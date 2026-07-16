@@ -279,8 +279,8 @@ body>.navbar .brand:hover {
 
 #media .post_row .post .text p {
 	margin: 0;
-	line-height: 21px;
-	font-size: 14px;
+	line-height: 22px;
+	font-size: 18px;
 }
 
 #media .post_row .post .author_box {
@@ -304,8 +304,8 @@ body>.navbar .brand:hover {
 #media .post_row .post .author_box p {
 	color: #B2B2B2;
 	font-style: italic;
-	font-size: 13px;
-	line-height: 14px;
+	font-size: 16px;
+	line-height: 20px;
 	margin: 0;
 }
 
