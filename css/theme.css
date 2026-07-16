@@ -1,14 +1,41 @@
 body {
-	padding-top: 15px;
-	padding-bottom: 0px;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    font-size: 18px;          /* 👈 新增：控制全站基础字号，建议 17~18px */
+    line-height: 1.4;         /* 👈 新增：提高行距，阅读更舒适 */
 }
 
 
 /* Custom container */
 
+/* ===== 让容器占满屏幕宽度（覆盖 Bootstrap 响应式限制） ===== */
 .container {
-	margin: 0 auto;
-	max-width: 1000px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+/* 针对所有屏幕尺寸统一全宽，避免被媒体查询覆盖 */
+@media (min-width: 768px) {
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 980px) {
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
 
 .container>hr {
@@ -52,7 +79,7 @@ body {
 }
 
 body>.navbar {
-	font-size: 13px
+	font-size: 16px
 }
 
 
@@ -87,33 +114,34 @@ body>.navbar .brand:hover {
 }
 
 .bs-docs-sidenav {
-	width: 228px;
-	margin: 30px 0 0;
-	padding: 0;
-	background-color: #fff;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-	box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+    width: 170px;  
+    margin: 10px 0 0; 
+    padding: 0;
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
 }
 
-.bs-docs-sidenav>li>a {
-	display: block;
-	width: 200px;
-	margin: 0 0 -1px;
-	padding: 8px 14px;
-	border: 1px solid #e5e5e5;
+.bs-docs-sidenav > li > a {
+    display: block;
+    width: 150px; 
+    margin: 0 0 -1px;
+    padding: 5px 10px;  
+    border: 1px solid #e5e5e5;
+    font-size: 17px;  
 }
 
-.bs-docs-sidenav>li>a.subhead {
-	display: block;
-	width: 168px;
-	margin: 0 0 -1px;
-	padding: 8px 30px;
-	border: 1px solid #e5e5e5;
-	font-size: 12px;
+.bs-docs-sidenav > li > a.subhead {
+    display: block;
+    width: 130px;  
+    margin: 0 0 -1px;
+    padding: 6px 20px;  
+    border: 1px solid #e5e5e5;
+    font-size: 15px;  
 }
 
 .bs-docs-sidenav>li:first-child>a {
@@ -131,8 +159,8 @@ body>.navbar .brand:hover {
 .bs-docs-sidenav>.active>a {
 	position: relative;
 	z-index: 2;
-	padding: 9px 15px;
-	border: 0;
+	padding: 5px 10px;
+	border: 1px solid #e5e5e5;;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .15);
 	-webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
 	-moz-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
@@ -166,13 +194,13 @@ body>.navbar .brand:hover {
 }
 
 #media {
-	margin-top: 70px
+	margin-top: 30px
 }
 
 #media .header {
 	margin-left: 0;
-	margin-bottom: 56px;
-	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-top: 15px;
 }
 
 #media .post_row {
@@ -185,13 +213,17 @@ body>.navbar .brand:hover {
 }
 
 #media .post_row .post {
-	background: #fff;
-	/*margin-left: 0;;
-    margin-right: 20px;*/
-	border-radius: 4px;
-	box-shadow: 1px 1px 2px 0px #E0E0E0;
-	width: 487px;
-	height: 616px;
+    background: #fff;
+    border-radius: 6px;                /* 稍微增加圆角，更柔和 */
+    border: 1px solid #eaeaea;          /* 添加浅色边框，边缘立即清晰 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* 更深、更明显的阴影 */
+    width: 50%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    height: auto;
+    box-sizing: border-box;             /* 重要：让宽度包含 padding 和 border */
+    transition: all 0.3s ease;          /* 过渡效果，悬停时平滑变化 */
 }
 
 #media .post_row .last {
@@ -213,20 +245,20 @@ body>.navbar .brand:hover {
 
 #media .post_row .post .img .date p {
 	color: #fff;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: bold;
 	font-style: italic;
 	margin: 0;
 }
 
 #media .post_row .post .img img {
-	height: 275px;
-	width: 410px;
+	height: auto;
+	width: 60%;
 }
 
 #media .post_row .post .text {
 	margin: 18px auto 0;
-	width: 83%;
+	width: 90%;
 }
 
 #media .post_row .post .text h5 {
@@ -244,12 +276,12 @@ body>.navbar .brand:hover {
 	display: block;
 	margin-bottom: 12px;
 	font-style: italic;
-	font-size: 13px;
+	font-size: 15px;
 }
 
 #media .post_row .post .text p {
 	margin: 0;
-	line-height: 21px;
+	line-height: 24px;
 	font-size: 14px;
 }
 
@@ -260,7 +292,7 @@ body>.navbar .brand:hover {
 	text-align: left;
 	width: 85%;
 	padding-top: 12px;
-}
+} 
 
 #media .post_row .post .author_box h6 {
 	margin: 0 0 3px 0;
@@ -338,30 +370,55 @@ body>.navbar .brand:hover {
 	margin: 12.5px 0;
 	font-weight: 100;
 	margin-bottom: 25px;
-	line-height: 55px;
+	line-height: 100px;
+}
+
+.feature-item {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 默认轻微阴影 */
+    border-radius: 6px; /* 圆角 */
+    border: 1px solid #eaeaea; /* 轻微边框 */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    transition: all 0.3s ease; /* 添加过渡动画 */
 }
 
 .feature-item:hover {
-	box-shadow: 0px 1px 5px 1px rgb(216, 216, 216)
+    transform: translateY(-5px); /* 向上浮动5像素 */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* 更深的阴影 */
+    border-color: #ddd; /* 加深边框颜色 */
 }
 
 .feature-item img {
 	margin-left: 15px;
 	margin-right: 15px;
 	max-width: 90%;
-	height: 200px;
+	height: 155px;
+}
+
+/* 为news卡片的date添加统一样式 */
+.feature-item .date {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    color: #4c4e4d; 
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .feature-item h5 {
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    font-size: 18px;         
+    line-height: 1.2;
+    font-weight: 600;
+    color: #fb9b00;               
 }
 
 .feature-item p {
-	margin-left: 15px;
-	margin-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1.3;         /* 保持原有 */
+    margin-top: 5px;
+    font-size: 16px;          /* 👈 新增，略小于标题但比正文大 */
 }
 
 .feature-heading {
@@ -369,6 +426,8 @@ body>.navbar .brand:hover {
 	margin-bottom: 20px;
 	margin-left: 15px;
 	margin-right: 15px;
+	height: 50px;
+	line-height: 1.3;
 }
 
 .feature-heading a:hover {
@@ -382,6 +441,16 @@ body>.navbar .brand:hover {
 	margin-bottom: 10px;
 }
 
+.marketing h5 {
+    font-size: 18px;          /* 👈 新增 */
+    line-height: 1.3;         /* 行距稍大，更易读 */
+    font-weight: normal;
+}
+
+#workflow-page h4 {
+    font-size: 20px;
+    color: #fb9b00;
+
 .centered {
 	text-align: center;
 }
@@ -392,21 +461,37 @@ body>.navbar .brand:hover {
 }
 
 .jumbotron {
-	position: relative;
-	padding: 45px 0px 35px 0px;
-	color: #fff;
-	text-align: center;
-	text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-	background: #30393C;
-	background: -moz-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #30393C), color-stop(100%, #30393C));
-	background: -webkit-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -o-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -ms-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: linear-gradient(45deg, #30393C 0%, #000000 100%) repeat;
-	-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-	-moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
-	box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+    position: relative;
+    padding: 10px 0px 10px 0px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+    background: #2E8B57;
+    background: -moz-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #2E8B57), color-stop(100%, #1C5D3A));
+    background: -webkit-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
+    background: -o-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
+    background: -ms-linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%);
+    background: linear-gradient(45deg, #2E8B57 0%, #1C5D3A 100%) repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+}
+
+/* 固定 Logo 图片大小，并适配移动设备 */
+.jumbotron img {
+    width: 100px;          /* 固定宽度
+    max-width: 100%;       /* 在窄屏幕上自动缩小，防止溢出 */
+    height: auto;          /* 高度自适应，保持原始比例 */
+    display: block;        /* 块级化，便于居中 */
+    margin: 0 auto;        /* 水平居中（父容器 .jumbotron 已有 text-align: center，但 block 需要 margin auto） */
+	margin-bottom: 0;
+}
+
+.jumbotron h3 {
+    margin-top: 0;
+    margin-bottom: 5px;      /* 可根据喜好调整，0 则完全紧贴 */
+    line-height: 1.2;
 }
 
 .jumbotron:after {
@@ -444,8 +529,8 @@ img.float-right {
 }
 
 img.publications-thumb {
-	width: 142px;
-	height: 188px;
+	width: 82px;
+	height: 100px;
 }
 
 .caption {
@@ -511,42 +596,430 @@ ul.sponsors {
 	margin-bottom: 40px;
 }
 
+/* ============================================================
+   底部 Footer - 紧凑、左对齐、Arial 字体
+   ============================================================ */
 #footer {
-	z-index: 10;
-	margin-top: 50px;
-	margin-bottom: 0px;
-	padding-bottom: 25px;
-	border-top-width: 8px;
-	border-top-style: solid;
-	border-top-color: #2F2F2F;
-	background-color: #000000;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	text-align: center;
+    margin-top: 15px;
+    padding: 8px 0;
+    background-color: #2E8B57;
+    border: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一字体 */
 }
 
-#footer h3 {
-	font-size: 19px;
-	text-transform: uppercase;
-	font-family: BebasNeueRegular;
-	color: #8DBECE;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #30393C;
-	line-height: 35px;
-	margin-bottom: 20px;
-	margin-top: 25px;
-	font-weight: normal;
+/* ---- Footer 内 Logo 容器 ---- */
+#footer .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
 }
 
-#footer a img {
-	margin-top: 40px;
+#footer .logo-container img {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+}
+#footer .logo-container img:last-child {
+    margin-right: 0;
 }
 
-#footer p,
-#footer address {
-	color: #8F8F8F;
-	font-size: 11px;
+/* ---- 左侧文字（学校名称） ---- */
+#footer .span6:first-child p {
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 0 0 2px 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一 */
+    text-align: center;                           /* 左侧部分保持居中 */
+}
+
+/* ---- 右侧 Contact Information 区块 ---- */
+#footer .span6:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;        /* 整体左对齐 */
+    padding-left: 20px;             /* 与左侧保持视觉间距 */
+    text-align: left;               /* 所有文字左对齐 */
+}
+
+/* 右侧内部容器（用于限制宽度） */
+#footer .span6:last-child > div {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;              /* 强制左对齐 */
+}
+
+/* ---- 右侧标题 ---- */
+#footer .span6:last-child h3 {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 3px 0 3px 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一 */
+    text-align: left;              /* 标题左对齐 */
+}
+
+/* ---- 右侧详情文字 ---- */
+#footer .span6:last-child p,
+#footer .span6:last-child address,
+#footer .span6:last-child a {
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 0 0 2px 0;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;   /* 统一 */
+    text-align: left;              /* 内容左对齐 */
+}
+
+#footer .span6:last-child a {
+    text-decoration: underline;
+}
+
+/* ---- 响应式：小屏幕下叠放并居中（可选） ---- */
+@media (max-width: 767px) {
+    #footer {
+        padding: 10px 0;
+    }
+
+    #footer .span6:first-child,
+    #footer .span6:last-child {
+        align-items: center !important;
+        padding-left: 0 !important;
+        text-align: center !important;
+    }
+
+    #footer .span6:last-child > div {
+        text-align: center !important;
+    }
+
+    #footer .span6:last-child h3,
+    #footer .span6:last-child p,
+    #footer .span6:last-child address,
+    #footer .span6:last-child a {
+        text-align: center !important;
+    }
+
+    #footer .logo-container img {
+        height: 35px;
+        margin-right: 12px;
+    }
+
+    #footer .span6:last-child h3 {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    #footer .span6:first-child p,
+    #footer .span6:last-child p,
+    #footer .span6:last-child address,
+    #footer .span6:last-child a {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer .logo-container img {
+        height: 28px;
+        margin-right: 8px;
+    }
+
+    #footer .span6:last-child h3 {
+        font-size: 12px;
+    }
+
+    #footer .span6:first-child p,
+    #footer .span6:last-child p,
+    #footer .span6:last-child address,
+    #footer .span6:last-child a {
+        font-size: 8px;
+    }
+}
+
+
+/* 轮播图容器统一尺寸 */
+.carousel-inner {
+    height: 500px; /* 根据实际需求调整高度 */
+}
+
+/* 统一所有轮播图图片尺寸 */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例并填充容器 */
+    object-position: center; /* 确保图片居中显示 */
+}
+
+/* 确保轮播图项目高度继承 */
+.carousel-inner .item {
+    height: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-inner {
+        height: 250px;
+    }
+}
+
+/* --- Workflow 页面图片并排样式 --- */
+.image-row {
+    margin-top: 5px;      /* 与上方说明文字保持间距 */
+    margin-bottom: 10px;
+}
+
+.image-row .span6 {
+    text-align: center;    /* 图片在列内居中（可选） */
+}
+
+.image-row img {
+    display: block;
+	width: 90%;           /* 图片宽度填满列 */
+    max-width: 90%;       /* 确保图片不超过父容器宽度 */
+    height: auto;          /* 高度自适应，保持原始比例 */
+    margin: 0 auto;        /* 水平居中 */
+    float: none;           /* 覆盖可能的浮动 */
+    /* 如果还有其他干扰样式，可以加上 !important，但不推荐滥用 */
+    /* 移除旧 workflow-img 的固定高度和最大宽度限制 */
+    height: auto;
+}
+
+/* 针对小屏幕的微调（可选） */
+@media (max-width: 767px) {
+    .image-row {
+        margin-top: 15px;
+    }
+}
+
+/* 优化轮播图箭头样式 */
+.carousel-control {
+    width: 30px; /* 更小宽度 */
+    height: 30px; /* 更小高度 */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none; /* 移除黑色背景 */
+    border: none; /* 移除边框 */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control:hover {
+    opacity: 1;
+    background: none; /* 确保悬停时也没有背景 */
+}
+
+/* 左箭头图标 */
+.carousel-control.left {
+    left: 15px; /* 距离左侧的距离 */
+    background-image: none; /* 移除默认背景图像 */
+}
+
+/* 右箭头图标 */
+.carousel-control.right {
+    right: 15px; /* 距离右侧的距离 */
+    background-image: none; /* 移除默认背景图像 */
+}
+
+/* 使用自定义箭头图标 */
+.carousel-control.left:before {
+    content: '<';
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.right:before {
+    content: '>';
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .carousel-control {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .carousel-control.left:before,
+    .carousel-control.right:before {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-control {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .carousel-control.left:before,
+    .carousel-control.right:before {
+        font-size: 16px;
+    }
+}
+
+
+/* ===== 汉堡菜单按钮样式 ===== */
+.btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 8px;
+  background-color: #2E8B57;
+  background-image: none;
+  border: 1px solid #1C5D3A;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-navbar:hover,
+.btn-navbar:active,
+.btn-navbar.active,
+.btn-navbar.disabled,
+.btn-navbar[disabled] {
+  background-color: #1C5D3A;
+}
+
+.btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+/* 控制在不同设备上的显示 */
+.visible-phone {
+  display: none !important;
+}
+
+.visible-tablet {
+  display: none !important;
+}
+
+.hidden-phone {
+  display: block !important;
+}
+
+/* 手机设备（最大宽度 767px） */
+@media (max-width: 767px) {
+  .visible-phone {
+    display: block !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+  
+  .btn-navbar {
+    display: block;
+  }
+  
+  /* 确保导航栏在小屏幕上垂直排列 */
+  .nav-collapse .nav {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-collapse .nav > li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  
+  .nav-collapse .nav > li > a {
+    display: block;
+    padding: 10px 15px;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    border-radius: 0;
+  }
+  
+  .nav-collapse .nav > li:first-child > a {
+    border-radius: 0;
+  }
+  
+  .nav-collapse .nav > li:last-child > a {
+    border-radius: 0;
+  }
+}
+
+/* 平板设备（宽度在 768px 到 979px 之间） */
+@media (min-width: 768px) and (max-width: 979px) {
+  .visible-tablet {
+    display: block !important;
+  }
+  
+  .btn-navbar {
+    display: block;
+  }
+  
+  /* 在平板上也使用垂直排列 */
+  .nav-collapse .nav {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-collapse .nav > li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  
+  .nav-collapse .nav > li > a {
+    display: block;
+    padding: 10px 15px;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    border-radius: 0;
+  }
+}
+
+/* 电脑设备（最小宽度 980px） */
+@media (min-width: 980px) {
+  /* 确保汉堡按钮在电脑上隐藏 */
+  .btn-navbar {
+    display: none;
+  }
+  
+  /* 确保导航菜单在电脑上展开 */
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
 }
