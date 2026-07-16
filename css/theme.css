@@ -129,7 +129,7 @@ body>.navbar .brand:hover {
     margin: 0 0 -1px;
     padding: 5px 10px;  
     border: 1px solid #e5e5e5;
-    font-size: 18px;  
+    font-size: 14px;  
 }
 
 .bs-docs-sidenav > li > a.subhead {
@@ -138,7 +138,7 @@ body>.navbar .brand:hover {
     margin: 0 0 -1px;
     padding: 6px 20px;  
     border: 1px solid #e5e5e5;
-    font-size: 16px;  
+    font-size: 13px;  
 }
 
 .bs-docs-sidenav>li:first-child>a {
@@ -261,7 +261,7 @@ body>.navbar .brand:hover {
 #media .post_row .post .text h5 {
 	margin: 0 0 8px 0;
 	font-size: 20px;
-	line-height: 25px;
+	line-height: 23px;
 }
 
 #media .post_row .post .text h5 a {
@@ -279,7 +279,7 @@ body>.navbar .brand:hover {
 #media .post_row .post .text p {
 	margin: 0;
 	line-height: 21px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 #media .post_row .post .author_box {
