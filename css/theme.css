@@ -132,7 +132,7 @@ body>.navbar .brand:hover {
     margin: 0 0 -1px;
     padding: 5px 10px;  
     border: 1px solid #e5e5e5;
-    font-size: 14px;  
+    font-size: 17px;  
 }
 
 .bs-docs-sidenav > li > a.subhead {
@@ -141,7 +141,7 @@ body>.navbar .brand:hover {
     margin: 0 0 -1px;
     padding: 6px 20px;  
     border: 1px solid #e5e5e5;
-    font-size: 13px;  
+    font-size: 15px;  
 }
 
 .bs-docs-sidenav>li:first-child>a {
