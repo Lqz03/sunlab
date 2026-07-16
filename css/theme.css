@@ -3,7 +3,7 @@ body {
     padding-top: 15px;
     padding-bottom: 0px;
     font-size: 18px;          /* 👈 新增：控制全站基础字号，建议 17~18px */
-    line-height: 1.6;         /* 👈 新增：提高行距，阅读更舒适 */
+    line-height: 1.4;         /* 👈 新增：提高行距，阅读更舒适 */
 }
 
 
@@ -245,7 +245,7 @@ body>.navbar .brand:hover {
 
 #media .post_row .post .img .date p {
 	color: #fff;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: bold;
 	font-style: italic;
 	margin: 0;
@@ -276,7 +276,7 @@ body>.navbar .brand:hover {
 	display: block;
 	margin-bottom: 12px;
 	font-style: italic;
-	font-size: 13px;
+	font-size: 15px;
 }
 
 #media .post_row .post .text p {
@@ -446,6 +446,10 @@ body>.navbar .brand:hover {
     line-height: 1.3;         /* 行距稍大，更易读 */
     font-weight: normal;
 }
+
+#workflow-page h4 {
+    font-size: 20px;
+    color: #fb9b00;
 
 .centered {
 	text-align: center;
