@@ -653,7 +653,7 @@ ul.sponsors {
 #footer .span6:last-child h3 {
     font-size: 17px;
     line-height: 1.5;
-    margin: 3px 0 3px 0;
+    margin: 5px 0 5px 0;
     padding-bottom: 0;
     border-bottom: none;
     color: #ffffff;
@@ -668,8 +668,8 @@ ul.sponsors {
 #footer .span6:last-child address,
 #footer .span6:last-child a {
     font-size: 16px;
-    line-height: 1.2;
-    margin: 0 0 2px 0;
+    line-height: 1.4;
+    margin: 0 0 4px 0;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;   /* 统一 */
     text-align: left;              /* 内容左对齐 */
