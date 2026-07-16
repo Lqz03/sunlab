@@ -25,24 +25,13 @@
             margin-top: 0;
          }
 
-         /* 仅对 Workflow 页面中的图片统一高度 */
          #workflow-page .image-row .span6 img {
-            height: 240px;
             width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;           /* 统一宽高比 4:3，可根据图片风格调整为 16/10 或 3/2 */
             object-fit: cover;
             object-position: center;
-         }
-
-         @media (max-width: 768px) {
-            #workflow-page .image-row .span6 img {
-                  height: 190px;
-            }
-         }
-
-         @media (max-width: 480px) {
-            #workflow-page .image-row .span6 img {
-                  height: 150px;
-            }
+            display: block;
          }
 
       </style>
