@@ -79,7 +79,7 @@ body {
 }
 
 body>.navbar {
-	font-size: 13px
+	font-size: 16px
 }
 
 
@@ -400,24 +400,24 @@ body>.navbar .brand:hover {
 .feature-item .date {
     display: block;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 15px;
     color: #4c4e4d; 
     margin-bottom: 5px;
     text-align: center;
 }
 
 .feature-item h5 {
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 5px;
-	margin-bottom: 10px;
+    font-size: 18px;         
+    line-height: 1.4;
+    font-weight: 600;
 }
 
 .feature-item p {
-	margin-left: 15px;
-	margin-right: 15px;
-	line-height: 1.2;
-	margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1.6;         /* 保持原有 */
+    margin-top: 5px;
+    font-size: 16px;          /* 👈 新增，略小于标题但比正文大 */
 }
 
 .feature-heading {
