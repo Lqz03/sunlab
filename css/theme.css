@@ -1,7 +1,9 @@
 body {
-    margin: 0;  /* 移除浏览器默认边距 */
-	padding-top: 15px;
-	padding-bottom: 0px;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    font-size: 18px;          /* 👈 新增：控制全站基础字号，建议 17~18px */
+    line-height: 1.6;         /* 👈 新增：提高行距，阅读更舒适 */
 }
 
 
@@ -279,8 +281,8 @@ body>.navbar .brand:hover {
 
 #media .post_row .post .text p {
 	margin: 0;
-	line-height: 22px;
-	font-size: 18px;
+	line-height: 24px;
+	font-size: 14px;
 }
 
 #media .post_row .post .author_box {
@@ -304,8 +306,8 @@ body>.navbar .brand:hover {
 #media .post_row .post .author_box p {
 	color: #B2B2B2;
 	font-style: italic;
-	font-size: 16px;
-	line-height: 20px;
+	font-size: 13px;
+	line-height: 14px;
 	margin: 0;
 }
 
